@@ -1,0 +1,9 @@
+if [ ! -e $HOME/.zsh/configs/pure ]; then
+  wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/pure
+fi
+
+if [ ! -e $HOME/.zsh/syntax-highlighting ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/syntax-highlighting
+  ln -s $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh $HOME/.zsh/configs/zsh-syntax-highlighting
+fi
+

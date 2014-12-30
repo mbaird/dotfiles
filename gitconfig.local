@@ -1,0 +1,9 @@
+[user]
+  name  = Michael Baird
+  email = me@michaelbaird.co.uk
+[github]
+  user = mbaird
+[alias]
+  d = diff
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+

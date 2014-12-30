@@ -1,0 +1,18 @@
+# Unix
+unalias ln
+unalias ...
+unalias l
+unalias \G
+unalias \M
+unalias \L
+unalias \ONE
+
+alias l='ls -l'
+alias dev='cd ~/Developer'
+
+# git
+unalias gci
+
+# Rails
+unalias rk
+

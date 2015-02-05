@@ -1,3 +1,4 @@
 --skip-bundle
 --skip-test-unit
+--skip-spring
 -d postgresql

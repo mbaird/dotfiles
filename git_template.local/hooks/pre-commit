@@ -1,0 +1,12 @@
+if [ ! -f .rubocop.yml ]; then
+    exit 0
+fi
+
+if hash rubocop-git 2>/dev/null; then
+  rubocop-git --cached --hound
+else
+  echo "Could not find rubocop-git!"
+  exit 1
+fi
+
+

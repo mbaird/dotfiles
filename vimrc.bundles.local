@@ -1,0 +1,2 @@
+Plugin 'croaky/vim-colors-github'
+Plugin 'zenorocha/dracula-theme',{'rtp': 'vim/'}

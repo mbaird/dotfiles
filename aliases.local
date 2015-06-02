@@ -1,18 +1,8 @@
-# Unix
-unalias ln
-unalias ...
-unalias l
-unalias \G
-unalias \M
-unalias \L
-unalias \ONE
-
 alias l='ls -l'
+alias ll='ls -al'
+alias lh='ls -Alh'
 alias dev='cd ~/Developer'
 
-# git
-unalias gci
-
 # Rails
-unalias rk
+alias be='bundle exec'
 

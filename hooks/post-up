@@ -1,5 +1,9 @@
-if [ ! -e $HOME/.zsh/configs/pure ]; then
-  wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/pure
+if [ ! -e $HOME/.zsh/configs/prompt_pure_setup ]; then
+  wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/prompt_pure_setup
+fi
+
+if [ ! -e $HOME/.zsh/configs/async ]; then
+  wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O $HOME/.zsh/configs/async
 fi
 
 if [ ! -e $HOME/.zsh/syntax-highlighting ]; then

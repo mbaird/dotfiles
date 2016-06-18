@@ -1,7 +1,4 @@
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# travis gem
-[ -f /Users/michaelbaird/.travis/travis.sh ] && source /Users/michaelbaird/.travis/travis.sh
+export NVM_DIR="/Users/michael/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

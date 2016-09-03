@@ -1,4 +1,0 @@
-set -g c0-change-trigger 10
-set -g c0-change-interval 250
-
-

@@ -1,0 +1,17 @@
+# Unix
+alias l="ls -l"
+alias ll="ls -al"
+alias ln="ln -v"
+alias lh="ls -Alh"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Folders
+alias dev="cd ~/Developer"
+
+# Rails
+alias be="bundle exec"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'

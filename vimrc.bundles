@@ -1,0 +1,16 @@
+if &compatible
+  set nocompatible
+end
+
+call plug#begin('~/.vim/bundle')
+
+Plug 'dracula/vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-endwise'
+
+call plug#end()

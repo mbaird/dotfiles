@@ -1,8 +1,0 @@
-alias l='ls -l'
-alias ll='ls -al'
-alias lh='ls -Alh'
-alias dev='cd ~/Developer'
-
-# Rails
-alias be='bundle exec'
-

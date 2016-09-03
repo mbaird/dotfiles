@@ -1,3 +1,0 @@
-Plug 'croaky/vim-colors-github'
-Plug 'zenorocha/dracula-theme',{'rtp': 'vim/'}
-Plug 'rizzatti/dash.vim'

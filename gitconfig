@@ -3,8 +3,6 @@
   email = mbaird@users.noreply.github.com
 [github]
   user = mbaird
-[init]
-  templatedir = ~/.git_template
 [push]
   default = current
 [color]

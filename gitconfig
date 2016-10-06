@@ -16,6 +16,7 @@
   d = diff
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   up = !git fetch origin && git rebase origin/master
+  amend = commit --amend
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input

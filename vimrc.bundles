@@ -4,13 +4,20 @@ end
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'dracula/vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-ruby/vim-ruby'
+Plug 'dracula/vim'
+Plug 'janko-m/vim-test'
+Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()

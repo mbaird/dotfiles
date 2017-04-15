@@ -15,3 +15,6 @@ alias be="bundle exec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Show remaining battery time
+alias batt="pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d' '"

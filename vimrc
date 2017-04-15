@@ -45,6 +45,9 @@ nnoremap <CR> o<Esc>k
 " Close buffer without closing the window
 nnoremap <silent> <leader>d :bp\|bd #<CR>
 
+" Quickly fix weird rendering issues
+nnoremap <leader>r :redraw!<CR>
+
 " ctrlp
 nnoremap ff :CtrlP<CR>
 " let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'

@@ -61,12 +61,10 @@ autocmd BufWritePost * :set nobinary | set eol
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-" vim-fugitive
-nnoremap <leader>gx :Gbrowse<CR>
-nnoremap <leader>g :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
+let g:airline_extensions = ['ctrlp', 'branch', 'tabline']
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = '%{airline#util#wrap(airline#parts#filetype(),0)}'
 
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e

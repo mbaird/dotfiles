@@ -21,3 +21,6 @@ alias batt="pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d' 
 
 # Journal
 alias j="jrnl"
+
+# Today
+alias t="$EDITOR ~/.today"

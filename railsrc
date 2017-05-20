@@ -1,4 +1,1 @@
---skip-bundle
---skip-test-unit
---skip-spring
--d postgresql
+--skip-bundle --skip-test --skip-system-test --skip-spring --skip-listen --database postgresql --skip-coffee --skip-turbolinks --skip-action-cable

@@ -64,6 +64,10 @@ let g:airline_section_z = '%{airline#util#wrap(airline#parts#filetype(),0)}'
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Disable fucking netrw
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
+
 " Ruler at 80 characters
 set textwidth=80
 set colorcolumn=+1

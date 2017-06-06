@@ -54,11 +54,6 @@ nnoremap ff :CtrlP<CR>
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-" No newline at end of file
-set noeol
-autocmd BufWritePre * :set binary | set noeol
-autocmd BufWritePost * :set nobinary | set eol
-
 " vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['ctrlp', 'branch', 'tabline']

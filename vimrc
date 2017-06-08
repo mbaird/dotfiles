@@ -110,6 +110,9 @@ map gd :bd<cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 
+" Use Markdown highlighting for today
+au BufReadPost .today set syntax=markdown
+
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
 

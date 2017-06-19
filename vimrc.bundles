@@ -1,23 +1,19 @@
-if &compatible
-  set nocompatible
-end
-
 call plug#begin('~/.vim/bundle')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'janko-m/vim-test'
+Plug 'jkramer/vim-checkbox'
 Plug 'mxw/vim-jsx'
+Plug 'mhinz/vim-grepper'
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-syntastic/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'

@@ -1,11 +1,8 @@
 # Unix
 alias l="ls -l"
 alias ll="ls -al"
-alias ln="ln -v"
 alias lh="ls -Alh"
 alias mkdir="mkdir -p"
-alias e="$EDITOR"
-alias v="$VISUAL"
 
 # Folders
 alias dev="cd ~/Developer"
@@ -18,9 +15,6 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Show remaining battery time
 alias batt="pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d' '"
-
-# Journal
-alias j="jrnl"
 
 # Today
 alias t="$EDITOR ~/.today"

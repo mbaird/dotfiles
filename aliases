@@ -18,3 +18,6 @@ alias batt="pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d' 
 
 # Today
 alias t="$EDITOR ~/.today"
+
+# Vim -> Neovim
+alias vim="nvim"

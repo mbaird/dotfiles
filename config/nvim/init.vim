@@ -113,6 +113,7 @@ augroup END
 " ctrlp.vim -- Fuzzy file/buffer finder
 nnoremap ff :CtrlP<CR>
 let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+let g:ctrlp_use_caching = 0
 
 " vim-grepper -- Decent async grep with quickfix support
 set grepprg=rg\ --color=never

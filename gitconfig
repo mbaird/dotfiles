@@ -17,6 +17,10 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   up = !git fetch origin && git rebase origin/master
   amend = commit --amend
+  rc = rebase --continue
+  ra = rebase --abort
+  cpc = cherry-pick --continue
+  cpa = cherry-pick --abort
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input

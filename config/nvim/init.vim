@@ -46,6 +46,7 @@ set nofoldenable        " Disable folding
 set nojoinspaces        " Disable inserting 2 spaces after sentences
 set noshowmode          " Hide mode (use `vim-airline` instead)
 set nohlsearch          " Disable search match highlighting
+set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
 set relativenumber      " Use relative numnbering
@@ -121,13 +122,15 @@ nnoremap <leader>g :Grepper -tool rg<cr>
 
 " vim-airline -- Statusbar & tabline
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = ['ctrlp', 'branch', 'tabline']
+let g:airline_extensions = ['ctrlp', 'tabline']
+let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_section_x = ''
 let g:airline_section_y = ''
-let g:airline_section_z = '%{airline#util#wrap(airline#parts#filetype(),0)}'
+let g:airline_section_z = ''
+let g:airline_skip_empty_sections = 1
 
 " vim-ruby -- Syntax highlighting for Ruby
-let g:ruby_path = system('rbenv prefix') " Faster init
+let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-test -- Wrapper for running tests on different granularities
 nmap <silent> <leader>t :TestNearest<CR>

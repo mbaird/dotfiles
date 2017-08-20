@@ -133,9 +133,19 @@ let g:airline_skip_empty_sections = 1
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-test -- Wrapper for running tests on different granularities
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>l :TestLast<CR>
+let g:fifo_file = "/tmp/vim.fifo"
+
+function! PipeStrategy(cmd)
+  call system('echo clear > ' . g:fifo_file)
+  execute 'silent !echo ' . a:cmd . ' > ' . g:fifo_file
+endfunction
+
+let g:test#custom_strategies = { 'pipe': function('PipeStrategy') }
+let g:test#strategy = 'pipe'
+
+nmap <silent> <leader>t :w \| :TestNearest<CR>
+nmap <silent> <leader>T :w \| :TestFile<CR>
+nmap <silent> <leader>l :w \| :TestLast<CR>
 
 " vim-jsx -- Syntax highlighting for .jsx files
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files

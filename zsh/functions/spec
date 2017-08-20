@@ -1,0 +1,11 @@
+function spec() {
+  clear
+
+  if [ ! -p /tmp/vim.fifo ]; then
+    mkfifo /tmp/vim.fifo
+  fi
+
+  while true; do
+    sh -c "$(cat /tmp/vim.fifo)"
+  done
+}

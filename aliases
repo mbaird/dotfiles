@@ -5,7 +5,8 @@ alias lh="ls -Alh"
 alias mkdir="mkdir -p"
 
 # Folders
-alias dev="cd ~/Developer"
+alias dev="cd $DEV"
+alias web="cd $DEV/web"
 
 # Rails
 alias be="bundle exec"

@@ -55,6 +55,7 @@ set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set smartindent         " Smarter auto indenting
 set tabstop=2           " Number of spaces per tab
+set termguicolors       " Enable true color
 set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
 set textwidth=80        " Ruler at 80 characters

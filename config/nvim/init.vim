@@ -7,13 +7,10 @@ let &packpath = &runtimepath
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'janko-m/vim-test'
-Plug 'jkramer/vim-checkbox'
 Plug 'mbaird/vim-dracula'
 Plug 'mhinz/vim-grepper'
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
@@ -147,9 +144,6 @@ let g:test#strategy = 'pipe'
 nmap <silent> <leader>t :w \| :TestNearest<CR>
 nmap <silent> <leader>T :w \| :TestFile<CR>
 nmap <silent> <leader>l :w \| :TestLast<CR>
-
-" vim-jsx -- Syntax highlighting for .jsx files
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " netrw.vim -- Useless shit
 let g:loaded_netrw       = 1 " Disable netrw

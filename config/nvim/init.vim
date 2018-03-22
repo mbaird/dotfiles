@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'janko-m/vim-test'
+Plug 'justinmk/vim-sneak'
 Plug 'mbaird/vim-dracula'
 Plug 'mhinz/vim-grepper'
 Plug 'pangloss/vim-javascript'

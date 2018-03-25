@@ -8,6 +8,7 @@ let &packpath = &runtimepath
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'hashivim/vim-terraform'
 Plug 'janko-m/vim-test'
 Plug 'justinmk/vim-sneak'
 Plug 'mbaird/vim-dracula'

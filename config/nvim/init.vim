@@ -8,13 +8,12 @@ let &packpath = &runtimepath
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'hashivim/vim-terraform'
 Plug 'janko-m/vim-test'
 Plug 'justinmk/vim-sneak'
 Plug 'mbaird/vim-dracula'
 Plug 'mhinz/vim-grepper'
-Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -23,8 +22,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-ruby/vim-ruby'
-Plug 'jwalton512/vim-blade'
 
 call plug#end()
 
@@ -129,9 +126,6 @@ let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
 let g:airline_skip_empty_sections = 1
-
-" vim-ruby -- Syntax highlighting for Ruby
-let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-test -- Wrapper for running tests on different granularities
 let g:fifo_file = "/tmp/vim.fifo"

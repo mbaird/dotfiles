@@ -118,6 +118,9 @@ let g:ctrlp_use_caching = 0
 set grepprg=rg\ --color=never
 nnoremap <leader>g :Grepper -tool rg<cr>
 
+" vim-ruby -- Syntax highlighting for Ruby
+let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
+
 " vim-airline -- Statusbar & tabline
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['ctrlp', 'tabline']

@@ -151,6 +151,7 @@ let g:loaded_netrw       = 1 " Disable netrw
 let g:loaded_netrwPlugin = 1 " Disable netrw
 
 " ale -- Use linters to fix on save
+nmap <silent> <leader>f :ALEFix<CR>
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '>>'
 let g:ale_fix_on_save = 1
@@ -158,3 +159,6 @@ let g:ale_fixers = {
       \ 'javascript': ['eslint'],
       \ 'ruby': ['rubocop']
       \ }
+let g:ale_history_enabled = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'

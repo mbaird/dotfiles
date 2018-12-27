@@ -9,16 +9,10 @@ fi
 nvim -u "$HOME"/.config/nvim/init.vim +PlugUpdate +PlugClean! +qa
 
 # Pure Prompt
-if [ ! -e $HOME/.zsh/configs/prompt_pure_setup ]; then
-  wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/prompt_pure_setup
-fi
+wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/prompt_pure_setup
 
-if [ ! -e $HOME/.zsh/configs/async ]; then
-  wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O $HOME/.zsh/configs/async
-fi
+wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O $HOME/.zsh/configs/async
 
 # Syntax Highlighting
-if [ ! -e $HOME/.zsh/syntax-highlighting ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/syntax-highlighting
-  ln -s $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh $HOME/.zsh/configs/zsh-syntax-highlighting
-fi
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/syntax-highlighting
+ln -s $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh $HOME/.zsh/configs/zsh-syntax-highlighting

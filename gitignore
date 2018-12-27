@@ -4,6 +4,7 @@
 .byebug_history
 .env
 .rbenv-gemsets
+.ruby-version
 db/*.sqlite3
 log/*.log
 rerun.txt

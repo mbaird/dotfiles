@@ -95,6 +95,9 @@ nnoremap <CR> o<Esc>k
 " Close buffer without closing the window
 nnoremap <silent> <leader>d :bp\|bd #<CR>
 
+" Close all other buffers
+nnoremap <silent> <leader>D :%bd\|e#\|bd #<CR>
+
 
 " Auto Commands
 " --------------------

@@ -14,7 +14,7 @@
   co = checkout
   s = status
   d = diff
-  lg = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   up = !git fetch origin && git rebase origin/master
   amend = commit --amend
   rc = rebase --continue

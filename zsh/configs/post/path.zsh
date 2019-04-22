@@ -10,4 +10,7 @@ fi
 PATH=".git/safe/../../node_modules/.bin:$PATH"
 PATH=".git/safe/../../bin:$PATH"
 
+# add homebrew python to path
+PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 export -U PATH

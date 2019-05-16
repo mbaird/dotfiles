@@ -90,7 +90,7 @@ nnoremap gp :bp<cr>
 nnoremap gd :bd<cr>
 
 " Enter newlines without entering insert mode
-nnoremap <CR> o<Esc>k
+nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : 'o'
 
 " Close buffer without closing the window
 nnoremap <silent> <leader>d :bp\|bd #<CR>

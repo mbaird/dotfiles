@@ -1,21 +1,17 @@
 [user]
   name  = Michael Baird
   email = mbaird@users.noreply.github.com
-[github]
-  user = mbaird
 [push]
   default = current
-[color]
-  ui = auto
 [alias]
   aa = add --all
-  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
   ci = commit -v
   co = checkout
   s = status
   d = diff
+  dc = diff --cached
   lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  up = !git fetch origin && git rebase origin/master
+  up = !git fetch origin --update-head-ok && git rebase origin/master
   amend = commit --amend
   rc = rebase --continue
   ra = rebase --abort
@@ -24,15 +20,10 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
-[commit]
-  template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
   autosquash = true
-[diff]
-  compactionHeuristic = true
+  autostash = true
 [init]
   templatedir = ~/.gittemplate

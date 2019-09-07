@@ -1,43 +1,75 @@
-# load custom executable functions
+# Load custom functions
 for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
-# these are loaded first, second, and third, respectively.
-_load_settings() {
-  _dir="$1"
-  if [ -d "$_dir" ]; then
-    if [ -d "$_dir/pre" ]; then
-      for config in "$_dir"/pre/**/*(N-.); do
-        . $config
-      done
-    fi
+setopt autocd
 
-    for config in "$_dir"/**/*(N-.); do
-      case "$config" in
-        "$_dir"/pre/*)
-          :
-          ;;
-        "$_dir"/post/*)
-          :
-          ;;
-        *)
-          if [ -f $config ]; then
-            . $config
-          fi
-          ;;
-      esac
-    done
+# Colours
+autoload -U colors
+colors
 
-    if [ -d "$_dir/post" ]; then
-      for config in "$_dir"/post/**/*(N-.); do
-        . $config
-      done
-    fi
-  fi
-}
-_load_settings "$HOME/.zsh/configs"
+export CLICOLOR=1
 
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+# Keybindings
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^P" history-search-backward
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+bindkey '^[[3~' delete-char
+
+# History
+setopt hist_ignore_all_dups inc_append_history
+HISTFILE=~/.zhistory
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Completion
+fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
+autoload -U compinit
+compinit
+
+compdef g=git
+
+# fzf
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="$PATH:/usr/local/opt/fzf/bin"
+fi
+
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+# Path
+# ensure dotfiles bin directory is loaded first
+PATH="$HOME/.bin:/usr/local/sbin:/usr/local/bin:$PATH"
+
+# load rbenv if available
+if command -v rbenv >/dev/null; then
+  eval "$(rbenv init - --no-rehash)"
+fi
+
+# mkdir .git/safe in the root of repositories you trust
+PATH=".git/safe/../../node_modules/.bin:$PATH"
+PATH=".git/safe/../../bin:$PATH"
+
+# add homebrew python to path
+PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+export -U PATH
+
+# Aliases
+alias l="ls -l"
+alias ll="ls -al"
+alias lh="ls -Alh"
+alias mkdir="mkdir -p"
+alias dev="cd $DEV"
+alias web="cd $DEV/web"
+alias be="bundle exec"
+alias t="$EDITOR ~/.today"
+alias vim="nvim"
+alias v="nvim"
+
+# Show remaining battery time
+alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"

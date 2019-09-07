@@ -7,8 +7,9 @@ let &packpath = &runtimepath
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'mbaird/vim-dracula'
 Plug 'mhinz/vim-grepper'
@@ -113,10 +114,8 @@ augroup END
 " Plugin Config
 " -------------
 
-" ctrlp.vim -- Fuzzy file/buffer finder
-nnoremap ff :CtrlP<CR>
-let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-let g:ctrlp_use_caching = 0
+" fzf.vim -- Fuzzy file/buffer finder
+nnoremap ff :Files<CR>
 
 " vim-grepper -- Decent async grep with quickfix support
 set grepprg=rg\ --color=never
@@ -127,7 +126,7 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-airline -- Statusbar & tabline
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = ['ctrlp', 'tabline']
+let g:airline_extensions = ['tabline']
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_section_x = ''
 let g:airline_section_y = ''

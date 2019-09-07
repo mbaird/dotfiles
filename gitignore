@@ -1,16 +1,12 @@
 .DS_Store
-*.sw[nop]
 .bundle
 .byebug_history
 .env
 .rbenv-gemsets
 .ruby-version
-db/*.sqlite3
 log/*.log
-rerun.txt
 tags
 !tags/
 tmp/**/*
 !tmp/cache/.keep
-*.pyc
 todo.md

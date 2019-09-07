@@ -73,3 +73,8 @@ alias v="nvim"
 
 # Show remaining battery time
 alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"
+
+# Prompt
+fpath+=("$HOME/.zsh/pure")
+autoload -U promptinit; promptinit
+prompt pure

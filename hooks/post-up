@@ -8,11 +8,8 @@ else
 fi
 nvim -u "$HOME"/.config/nvim/init.vim +PlugUpdate +PlugClean! +qa
 
-# Pure Prompt
-wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O $HOME/.zsh/configs/prompt_pure_setup
-
-wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O $HOME/.zsh/configs/async
-
 # Syntax Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/syntax-highlighting
 ln -s $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh $HOME/.zsh/configs/zsh-syntax-highlighting
+
+git submodule update --init

@@ -78,3 +78,5 @@ alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"
 fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit; promptinit
 prompt pure
+
+source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

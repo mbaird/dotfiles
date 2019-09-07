@@ -25,7 +25,5 @@
 [rebase]
   autosquash = true
   autostash = true
-[init]
-  templatedir = ~/.gittemplate
 [url "git@github.com:"]
   insteadOf = "https://github.com/"

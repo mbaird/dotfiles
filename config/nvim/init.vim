@@ -16,7 +16,6 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'mbaird/vim-dracula'
-Plug 'mhinz/vim-grepper'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -122,10 +121,6 @@ nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 
 " fzf.vim -- Fuzzy file/buffer finder
 nnoremap ff :Files<CR>
-
-" vim-grepper -- Decent async grep with quickfix support
-set grepprg=rg\ --color=never
-nnoremap <leader>g :Grepper -tool rg<cr>
 
 " vim-ruby -- Syntax highlighting for Ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init

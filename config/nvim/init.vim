@@ -52,7 +52,7 @@ set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
 set relativenumber      " Use relative numnbering
-set numberwidth=3       " Use 3 spaces for line numbers
+set numberwidth=4       " Use 4 spaces for line numbers
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set smartindent         " Smarter auto indenting

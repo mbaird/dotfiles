@@ -24,8 +24,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'ap/vim-buftabline'
 Plug 'w0rp/ale'
 Plug '~/.dotfiles/zsh'
 
@@ -46,7 +45,6 @@ set ignorecase          " Ignore case when searching
 set smartcase           " Ignore case if all lowercase when searching
 set nofoldenable        " Disable folding
 set nojoinspaces        " Disable inserting 2 spaces after sentences
-set noshowmode          " Hide mode (use `vim-airline` instead)
 set nohlsearch          " Disable search match highlighting
 set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
@@ -102,6 +100,26 @@ nnoremap <silent> <leader>d :bp\|bd #<CR>
 nnoremap <silent> <leader>D :%bd\|e#\|bd #<CR>
 
 
+" Status Line
+" --------------------
+set statusline=
+
+set statusline+=%{expand('%:~:.')}            " relative file path
+set statusline+=\                             " blank space
+set statusline+=%y                            " filetype
+set statusline+=\                             " blank space
+set statusline+=%m                            " modified flag [+]
+set statusline+=\                             " blank space
+
+set statusline+=%=                            " right-align from now on
+
+set statusline+=\[%{mode()}\]                 " current mode
+set statusline+=\                             " blank space
+set statusline+=%l                            " row number
+set statusline+=\/                            " slash separator
+set statusline+=%L                            " number of rows
+
+
 " Auto Commands
 " --------------------
 
@@ -132,15 +150,6 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 
 " vim-ruby -- Syntax highlighting for Ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
-
-" vim-airline -- Statusbar & tabline
-let g:airline_powerline_fonts = 1
-let g:airline_extensions = ['tabline']
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline_section_x = ''
-let g:airline_section_y = ''
-let g:airline_section_z = ''
-let g:airline_skip_empty_sections = 1
 
 " vim-test -- Wrapper for running tests on different granularities
 let g:fifo_file = "/tmp/vim.fifo"

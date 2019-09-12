@@ -76,6 +76,11 @@ call s:hi('PmenuSel', s:fg, s:bg)
 " Hidden
 call s:hi('EndOfBuffer', s:bg, s:bg)
 
+" BufTabLine
+call s:hi('BufTabLineCurrent', s:bg, s:fg)
+call s:hi('BufTabLineHidden', s:fg, s:bg)
+hi! link BufTabLineFill EndOfBuffer
+
 " Ale
 hi! link ALEWarningSign Error
 hi! link ALEErrorSign Error

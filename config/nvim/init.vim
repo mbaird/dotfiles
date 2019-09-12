@@ -15,7 +15,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'mbaird/vim-dracula'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -27,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
+Plug '~/.dotfiles/zsh'
 
 call plug#end()
 
@@ -37,7 +37,7 @@ call plug#end()
 let mapleader = ' '
 
 syntax enable
-color dracula
+colors dark
 
 set backspace=2         " Expected backspace behaviour
 set expandtab           " Convert tabs to spaces
@@ -134,13 +134,17 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-airline -- Statusbar & tabline
-let g:airline_powerline_fonts = 1
-let g:airline_extensions = ['tabline']
 let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline_extensions = ['tabline']
+let g:airline_left_sep=''
+let g:airline_powerline_fonts = 1
+let g:airline_right_sep=''
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
 let g:airline_skip_empty_sections = 1
+let g:airline_theme='minimalist'
+call airline#parts#define_accent('mode', 'none')
 
 " vim-test -- Wrapper for running tests on different granularities
 let g:fifo_file = "/tmp/vim.fifo"

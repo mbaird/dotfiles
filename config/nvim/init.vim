@@ -15,7 +15,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'mbaird/vim-dracula'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -25,11 +24,12 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug '~/.dotfiles/zsh'
 
 call plug#end()
-
 
 " General
 " --------------------
@@ -37,7 +37,7 @@ call plug#end()
 let mapleader = ' '
 
 syntax enable
-color dracula
+colors dark
 
 set backspace=2         " Expected backspace behaviour
 set expandtab           " Convert tabs to spaces

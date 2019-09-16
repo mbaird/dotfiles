@@ -88,6 +88,10 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 " Quick save
 nnoremap <Esc><Esc> :w<CR>
 
+" Quick buffer switching
+nnoremap gn :bn<cr>
+nnoremap gp :bp<cr>
+
 " Enter newlines without entering insert mode
 nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : 'o'
 

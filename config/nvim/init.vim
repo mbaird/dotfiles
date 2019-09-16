@@ -125,6 +125,10 @@ nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 
 " fzf.vim -- Fuzzy file/buffer finder
 nnoremap ff :Files<CR>
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 
 " vim-ruby -- Syntax highlighting for Ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init

@@ -70,6 +70,7 @@ alias be="bundle exec"
 alias t="$EDITOR ~/.today"
 alias vim="nvim"
 alias v="nvim"
+alias dot="cd ~/.dotfiles"
 
 # Show remaining battery time
 alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"

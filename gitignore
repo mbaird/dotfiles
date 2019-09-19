@@ -2,6 +2,7 @@
 .bundle
 .byebug_history
 .env
+.gems
 .rbenv-gemsets
 .ruby-version
 log/*.log

@@ -41,6 +41,8 @@ hi! link Special Normal
 hi! link Type Normal
 hi! link Directory Normal
 
+call s:hi('Title', s:fg, s:bg, 'bold')
+
 call s:hi('PreProc', s:dark_gray, s:bg)
 hi! link Statement PreProc
 hi! link NonText PreProc

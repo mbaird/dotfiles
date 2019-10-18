@@ -54,7 +54,7 @@ set relativenumber      " Use relative numnbering
 set numberwidth=4       " Use 4 spaces for line numbers
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
-set shortmess=I         " Disable welcome message
+set shortmess=Iat       " Disable intro message, truncate shortmessages
 set smartindent         " Smarter auto indenting
 set tabstop=2           " Number of spaces per tab
 set termguicolors       " Enable true color

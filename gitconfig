@@ -5,6 +5,7 @@
   default = current
 [alias]
   aa = add --all
+  ap = add -p
   ci = commit -v
   co = checkout
   s = status

@@ -15,6 +15,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'

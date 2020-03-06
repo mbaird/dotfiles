@@ -39,6 +39,7 @@ fi
 
 source "/usr/local/opt/fzf/shell/completion.zsh"
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/usr/local/opt/fzf/shell/fzf-tab/fzf-tab.zsh"
 
 # Path
 # ensure dotfiles bin directory is loaded first

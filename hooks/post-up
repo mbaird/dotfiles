@@ -8,4 +8,12 @@ else
 fi
 nvim -u "$HOME"/.config/nvim/init.vim +PlugUpdate +PlugClean! +qa
 
+if [ ! -e /usr/local/opt/fzf/shell/fzf-tab/fzf-tab.zsh ]; then
+  mkdir -p /usr/local/opt/fzf/shell
+  git -C /usr/local/opt/fzf/shell \
+    clone --recurse-submodules -j8 git://github.com/Aloxaf/fzf-tab.git
+else
+  git -C /usr/local/opt/fzf/shell/fzf-tab pull --recurse-submodules
+fi
+
 git submodule update --init

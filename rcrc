@@ -1,2 +1,2 @@
-EXCLUDES="README.md Gemfile"
+EXCLUDES="README.md Gemfile Brewfile"
 DOTFILES_DIRS="$HOME/.dotfiles"

@@ -14,10 +14,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-sneak'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -41,6 +37,7 @@ syntax enable
 colors dark
 
 set backspace=2         " Expected backspace behaviour
+set nohlsearch          " Disable search match highlighting
 set expandtab           " Convert tabs to spaces
 set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching
@@ -48,12 +45,11 @@ set smartcase           " Ignore case if all lowercase when searching
 set nofoldenable        " Disable folding
 set nojoinspaces        " Disable inserting 2 spaces after sentences
 set noshowmode          " Hide mode (use `vim-airline` instead)
-set nohlsearch          " Disable search match highlighting
 set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
 set relativenumber      " Use relative numnbering
-set numberwidth=4       " Use 4 spaces for line numbers
+set numberwidth=3       " Use 3 spaces for line numbers
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set shortmess=Iat       " Disable intro message, truncate shortmessages
@@ -71,12 +67,6 @@ set colorcolumn=+1      " Highlight at 80 characters
 
 " Switch to last viewed buffer
 nnoremap <leader><leader> <c-^>
-
-" Force use of h, j, k, l
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 " Quick window movement
 nnoremap <C-j> <C-w>j

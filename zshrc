@@ -50,6 +50,11 @@ if command -v rbenv >/dev/null; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
+# load nodenv if available
+if command -v nodenv >/dev/null; then
+  eval "$(nodenv init -)"
+fi
+
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../node_modules/.bin:$PATH"
 PATH=".git/safe/../../bin:$PATH"

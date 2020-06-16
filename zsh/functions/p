@@ -1,6 +1,0 @@
-function p() {
-    proj=$(ls $DEV | fzf -q $1 -1 -0)
-    if [[ -n "$proj" ]]; then
-        cd $DEV/$proj
-    fi
-}

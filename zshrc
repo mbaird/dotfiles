@@ -64,6 +64,9 @@ alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"
 # Path
 PATH="$HOME/.bin:${PATH}"
 
+# Homebrew
+PATH="/usr/local/sbin:${PATH}"
+
 # ruby via rbenv
 PATH="$HOME/.rbenv/shims:${PATH}"
 
@@ -71,7 +74,7 @@ PATH="$HOME/.rbenv/shims:${PATH}"
 PATH="$HOME/.nodenv/shims:${PATH}"
 
 # mkdir .git/safe for trusted repositories
-PATH=".git/safe/../../node_modules/.bin:$PATH"
-PATH=".git/safe/../../bin:$PATH"
+PATH=".git/safe/../../node_modules/.bin:${PATH}"
+PATH=".git/safe/../../bin:${PATH}"
 
 export -U PATH

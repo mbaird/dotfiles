@@ -120,6 +120,10 @@ let g:LanguageClient_echoProjectRoot = 0
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 
+" .talon file syntax
+autocmd BufNewFile,BufRead *.talon setfiletype talon
+autocmd FileType talon setlocal commentstring=#\ %s
+
 " fzf.vim -- Fuzzy file/buffer finder
 nnoremap ff :Files<CR>
 autocmd! FileType fzf

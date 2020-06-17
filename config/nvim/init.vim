@@ -23,6 +23,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
+Plug 'liuchengxu/vim-which-key'
 Plug '~/.dotfiles/zsh'
 
 call plug#end()
@@ -32,6 +33,10 @@ call plug#end()
 " --------------------
 
 let mapleader = ' '
+
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 syntax enable
 colors dark

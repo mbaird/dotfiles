@@ -8,10 +8,6 @@ let &packpath = &runtimepath
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '/usr/local/opt/fzf'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -24,6 +20,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
 Plug 'liuchengxu/vim-which-key'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '~/.dotfiles/zsh'
 
 call plug#end()
@@ -113,12 +110,11 @@ augroup END
 " Plugin Config
 " -------------
 
-let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio'],
-    \ }
-let g:LanguageClient_echoProjectRoot = 0
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
+" Completion
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " .talon file syntax
 autocmd BufNewFile,BufRead *.talon setfiletype talon

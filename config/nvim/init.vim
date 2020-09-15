@@ -1,66 +1,53 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
-
-" Plugins
-" --------------------
-
 call plug#begin('~/.local/share/nvim/plugged')
+
+
 
 Plug '/usr/local/opt/fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', { 'for': ['ruby', 'javascript'] }
 Plug '~/.dotfiles/zsh'
 
 call plug#end()
 
-
 " General
 " --------------------
-
 let mapleader = ' '
 
-syntax enable
 colors dark
 
-set backspace=2         " Expected backspace behaviour
-set nohlsearch          " Disable search match highlighting
+set colorcolumn=+1      " Highlight at 80 characters
 set expandtab           " Convert tabs to spaces
 set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching
-set smartcase           " Ignore case if all lowercase when searching
-set nofoldenable        " Disable folding
 set nojoinspaces        " Disable inserting 2 spaces after sentences
-set noshowmode          " Hide mode (use `vim-airline` instead)
 set noshowcmd           " Disable showing keystrokes below statusline
+set noshowmode          " Hide mode (use `vim-airline` instead)
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
-set relativenumber      " Use relative numnbering
 set numberwidth=3       " Use 3 spaces for line numbers
+set relativenumber      " Use relative numnbering
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set shortmess=Iat       " Disable intro message, truncate shortmessages
+set smartcase           " Ignore case if all lowercase when searching
 set smartindent         " Smarter auto indenting
 set tabstop=2           " Number of spaces per tab
 set termguicolors       " Enable true color
+set textwidth=80        " Ruler at 80 characters
 set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
-set textwidth=80        " Ruler at 80 characters
-set colorcolumn=+1      " Highlight at 80 characters
-
 
 " Mappings
 " --------------------
-
 " Switch to last viewed buffer
 nnoremap <leader><leader> <c-^>
 
@@ -76,23 +63,14 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 " Quick save
 nnoremap <Esc><Esc> :w<CR>
 
-" Quick buffer switching
-nnoremap gn :bn<cr>
-nnoremap gp :bp<cr>
-
-" Enter newlines without entering insert mode
-nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : 'o'
-
 " Close buffer without closing the window
 nnoremap <silent> <leader>d :bp\|bd #<CR>
 
-" Close all other buffers
-nnoremap <silent> <leader>D :%bd\|e#\|bd #<CR>
-
+" Clear current search highlight with Escape
+:nnoremap <silent> <esc> :nohlsearch<return>
 
 " Auto Commands
 " --------------------
-
 augroup AutoGroup
   autocmd!
   au VimLeave * set guicursor=a:hor30       " Reset cursor style on exit
@@ -100,18 +78,13 @@ augroup AutoGroup
   au BufReadPost .today set syntax=markdown " Use Markdown syntax for .today
 augroup END
 
-
 " Plugin Config
 " -------------
-
-" .talon file syntax
-autocmd BufNewFile,BufRead *.talon setfiletype talon
-autocmd FileType talon setlocal commentstring=#\ %s
-
 " fzf.vim -- Fuzzy file/buffer finder
-nnoremap ff :Files<CR>
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
+nnoremap ff :Files<return>
+nnoremap fb :Buffers<return>
+" Hide statusline
+autocmd FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 
@@ -123,7 +96,6 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_extensions = ['tabline']
 let g:airline_left_alt_sep=''
 let g:airline_left_sep=''
-let g:airline_powerline_fonts = 1
 let g:airline_right_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_section_x = ''
@@ -149,11 +121,12 @@ nmap <silent> <leader>T :w \| :TestFile<CR>
 nmap <silent> <leader>l :w \| :TestLast<CR>
 
 " netrw.vim -- Useless shit
-let g:loaded_netrw       = 1 " Disable netrw
-let g:loaded_netrwPlugin = 1 " Disable netrw
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
 
 " ale -- Use linters to fix on save
-nmap <silent> <leader>f :ALEFix<CR>
+command! Fix ALEFix
+command! Lint ALELint
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
 let g:ale_fixers = {

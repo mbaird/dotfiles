@@ -19,6 +19,7 @@
   cpc = cherry-pick --continue
   cpa = cherry-pick --abort
 [core]
+  attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore
   autocrlf = input
 [fetch]

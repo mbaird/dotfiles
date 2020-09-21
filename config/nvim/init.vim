@@ -1,13 +1,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-
-
 Plug '/usr/local/opt/fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -69,6 +68,9 @@ nnoremap <silent> <leader>d :bp\|bd #<CR>
 " Clear current search highlight with Escape
 :nnoremap <silent> <esc> :nohlsearch<return>
 
+" Exit (non-fzf) Terminal mode with Escape
+tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
+
 " Auto Commands
 " --------------------
 augroup AutoGroup
@@ -105,16 +107,20 @@ let g:airline_skip_empty_sections = 1
 let g:airline_theme='minimalist'
 call airline#parts#define_accent('mode', 'none')
 
-" vim-test -- Wrapper for running tests on different granularities
-let g:fifo_file = "/tmp/vim.fifo"
+" vim-test
+let g:test#strategy = "dispatch_background"
 
-function! PipeStrategy(cmd)
-  call system('echo clear > ' . g:fifo_file)
-  execute 'silent !echo ' . a:cmd . ' > ' . g:fifo_file
+function! ToggleTestingStrategy()
+  if g:test#strategy == "dispatch_background"
+    " Use a :terminal split for interactive debugging
+    let g:test#strategy = 'neovim'
+  else
+    " Use a background runner and quickfix window
+    let g:test#strategy = "dispatch_background"
+  endif
 endfunction
 
-let g:test#custom_strategies = { 'pipe': function('PipeStrategy') }
-let g:test#strategy = 'pipe'
+command! Debug call ToggleTestingStrategy()
 
 nmap <silent> <leader>t :w \| :TestNearest<CR>
 nmap <silent> <leader>T :w \| :TestFile<CR>

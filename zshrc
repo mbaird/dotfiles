@@ -10,17 +10,8 @@ autoload add-zsh-hook
 add-zsh-hook precmd vcs_info
 
 setopt prompt_subst
-
-local -ah ps1
-ps1=(
-  $'\n%{\r%}'
-  $'%{%F{blue}%}%~%{%f%} '
-  $'%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
-  $'\n%{\r%}'
-  $'❯ '
-)
-
-PROMPT="${(j..)ps1}"
+PROMPT="%{%}%~%{%f%} ❯ "
+RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 
 # fuzzy finder
 source "/usr/local/opt/fzf/shell/completion.zsh"

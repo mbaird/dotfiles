@@ -21,6 +21,7 @@ call plug#end()
 " --------------------
 let mapleader = ' '
 
+syntax enable
 colors dark
 
 set colorcolumn=+1      " Highlight at 80 characters

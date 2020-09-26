@@ -1,0 +1,6 @@
+{
+  "suggest.enablePreselect": true,
+  "suggest.floatEnable": false,
+  "suggest.autoTrigger": "none",
+  "suggest.noselect": false
+}

@@ -16,10 +16,14 @@ let s:blue   = '#5f819d'
 hi! link ALEErrorSign Error
 hi! link ALEWarningSign Error
 hi! link Constant Normal
+hi! link Directory Title
 hi! link ErrorMsg Error
 hi! link Identifier Normal
 hi! link LineNr PreProc
 hi! link MatchParen Visual
+hi! link Pmenu Visual
+hi! link PmenuSel Search
+hi! link Question Title
 hi! link SignColumn PreProc
 hi! link Special Normal
 hi! link SpellBad Error

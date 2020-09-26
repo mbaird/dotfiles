@@ -6,4 +6,5 @@
 .projections.json
 .rbenv-gemsets
 .ruby-version
+.solargraph.yml
 todo.md

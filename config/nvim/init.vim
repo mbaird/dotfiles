@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -151,3 +152,25 @@ let g:ale_history_enabled = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
+
+" coc.vim -- LSP integration
+set completeopt=menu,menuone,longest,noinsert
+
+" Use <tab> to trigger completion and navigate up/down
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use <Enter> to insert the highlighted item
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Goto mappings
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)

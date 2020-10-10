@@ -91,6 +91,7 @@ nnoremap fb :Buffers<return>
 autocmd FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
+let g:fzf_preview_window = ''
 
 " vim-ruby -- Syntax highlighting for Ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init

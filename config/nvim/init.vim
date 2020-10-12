@@ -59,16 +59,16 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Quick edit vim config
-nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>v :e $MYVIMRC<return>
 
 " Quick save
-nnoremap <Esc><Esc> :w<CR>
+nnoremap <esc><esc> :w<return>
 
 " Close buffer without closing the window
-nnoremap <silent> <leader>d :bp\|bd #<CR>
+nnoremap <silent> <leader>d :bp\|bd #<return>
 
 " Clear current search highlight with Escape
-:nnoremap <silent> <esc> :nohlsearch<return>
+nnoremap <silent> <esc> :nohlsearch<return>
 
 " Exit (non-fzf) Terminal mode with Escape
 tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
@@ -132,9 +132,9 @@ endfunction
 
 command! Debug call ToggleTestingStrategy()
 
-nmap <silent> <leader>t :w \| :TestNearest<CR>
-nmap <silent> <leader>T :w \| :TestFile<CR>
-nmap <silent> <leader>l :w \| :TestLast<CR>
+nmap <silent> <leader>t :w \| :TestNearest<return>
+nmap <silent> <leader>T :w \| :TestFile<return>
+nmap <silent> <leader>l :w \| :TestLast<return>
 
 " netrw.vim -- Useless shit
 let g:loaded_netrw       = 1
@@ -170,7 +170,7 @@ inoremap <silent><expr> <Tab>
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <Enter> to insert the highlighted item
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+:inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
 
 " Goto mappings
 nmap <silent> gd <Plug>(coc-definition)

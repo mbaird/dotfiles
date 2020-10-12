@@ -57,8 +57,7 @@ SAVEHIST=10000
 source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Aliases
-alias l="ls -l"
-alias lh="ls -Alh"
+alias l="ls -Alhp"
 alias mkdir="mkdir -p"
 alias dev="cd ~/Developer"
 alias web="cd ~/Developer/web"
@@ -67,7 +66,7 @@ alias vim="nvim"
 alias dot="cd ~/.dotfiles"
 alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"
 
-# Path
+# dotfile bin
 PATH="$HOME/.bin:${PATH}"
 
 # Homebrew

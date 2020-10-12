@@ -6,3 +6,4 @@ export PAGER=less
 export LESS='-F -i -R -S -w -X -z-4'
 export HOMEBREW_NO_AUTO_UPDATE=1
 export QMK_HOME=~/Developer/qmk
+export RCRC=~/.rcrc

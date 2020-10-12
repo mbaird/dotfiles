@@ -1,2 +1,2 @@
-EXCLUDES="README.md Gemfile rcrc docs"
+EXCLUDES="README.md Gemfile docs"
 DOTFILES_DIRS="$HOME/.dotfiles"

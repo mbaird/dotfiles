@@ -1,6 +1,7 @@
 {
+  "suggest.autoTrigger": "none",
   "suggest.enablePreselect": true,
   "suggest.floatEnable": false,
-  "suggest.autoTrigger": "none",
+  "suggest.maxCompleteItemCount": 8,
   "suggest.noselect": false
 }

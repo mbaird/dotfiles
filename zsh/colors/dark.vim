@@ -11,7 +11,7 @@ let s:gray05 = '#666666'
 let s:gray06 = '#333333'
 let s:gray07 = '#252525'
 let s:red    = '#ce5252'
-let s:blue   = '#5f819d'
+let s:blue   = '#5f91b9'
 
 hi! link ALEErrorSign Error
 hi! link ALEWarningSign Error
@@ -58,21 +58,21 @@ call s:hi("Visual", s:gray01, s:gray05)
 call s:hi("Search", s:gray07, s:gray02)
 
 let g:terminal_color_0 = s:gray07
-let g:terminal_color_1 = '#e78287'
-let g:terminal_color_2 = '#a7cb8b'
-let g:terminal_color_3 = '#daaa78'
-let g:terminal_color_4 = '#71bdf2'
-let g:terminal_color_5 = '#d190e3'
-let g:terminal_color_6 = '#65c1cd'
-let g:terminal_color_7 = '#b9bfca'
-let g:terminal_color_8 = s:gray07
-let g:terminal_color_9 = '#e78287'
-let g:terminal_color_10 = '#a7cb8b'
-let g:terminal_color_11 = '#daaa78'
-let g:terminal_color_12 = '#71bdf2'
-let g:terminal_color_13 = '#d190e3'
-let g:terminal_color_14 = '#65c1cd'
-let g:terminal_color_15 = '#fefefe'
+let g:terminal_color_1 = s:red
+let g:terminal_color_2 = s:blue
+let g:terminal_color_3 = s:gray02
+let g:terminal_color_4 = s:gray01
+let g:terminal_color_5 = s:gray02
+let g:terminal_color_6 = s:gray02
+let g:terminal_color_7 = s:gray01
+let g:terminal_color_8 = s:gray03
+let g:terminal_color_9 = s:red
+let g:terminal_color_10 = s:blue
+let g:terminal_color_11 = s:gray02
+let g:terminal_color_12 = s:gray01
+let g:terminal_color_13 = s:gray02
+let g:terminal_color_14 = s:gray02
+let g:terminal_color_15 = s:gray01
 
 let g:fzf_colors =
       \ { 'fg':    ['fg', 'Normal'],

@@ -112,10 +112,9 @@ let g:airline_theme='minimalist'
 call airline#parts#define_accent('mode', 'none')
 
 " vim-test
-let g:test#strategy = "dispatch_background"
+let g:test#strategy = "neovim"
 let g:test#rspec_quickfix = "--require $HOME/.config/rspec/quickfix_formatter.rb " .
       \ "--format QuickfixFormatter"
-let g:test#ruby#rspec#options = "--no-profile " . g:test#rspec_quickfix
 nnoremap <leader>; :Copen<return>
 nnoremap <leader>' :ccl<return>
 
@@ -124,6 +123,7 @@ function! ToggleTestingStrategy()
     " Use a :terminal split for interactive debugging
     let g:test#strategy = 'neovim'
     let g:test#ruby#rspec#options = "--no-profile "
+    let test#ruby#minitest#options = '--verbose'
   else
     " Use a background runner and quickfix window
     let g:test#strategy = "dispatch_background"

@@ -22,6 +22,7 @@
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore
   autocrlf = input
+  pager = less -x1,3
 [fetch]
   prune = true
 [rebase]

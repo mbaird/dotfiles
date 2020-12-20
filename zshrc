@@ -1,3 +1,6 @@
+# Reload env
+source ~/.zshenv
+
 # Prompt with VCS
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
@@ -65,24 +68,3 @@ alias t="$EDITOR ~/.today"
 alias vim="nvim"
 alias dot="cd ~/.dotfiles"
 alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"
-
-# dotfile bin
-PATH="$HOME/.bin:${PATH}"
-
-# Homebrew
-PATH="/usr/local/sbin:${PATH}"
-
-# ruby via rbenv
-PATH="$HOME/.rbenv/shims:${PATH}"
-
-# node via nodenv
-PATH="$HOME/.nodenv/shims:${PATH}"
-
-# python via pyenv
-PATH="$HOME/.pyenv/shims:${PATH}"
-
-# mkdir .git/safe for trusted repositories
-PATH=".git/safe/../../node_modules/.bin:${PATH}"
-PATH=".git/safe/../../bin:${PATH}"
-
-export -U PATH

@@ -14,7 +14,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale', { 'for': ['ruby', 'javascript'] }
+Plug 'w0rp/ale', { 'for': ['ruby', 'javascript', 'go'] }
 Plug '~/.dotfiles/zsh'
 
 call plug#end()
@@ -146,9 +146,11 @@ command! Fix ALEFix
 command! Lint ALELint
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
+let g:ale_disable_lsp = 1
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
-      \ 'ruby': ['rubocop']
+      \ 'ruby': ['rubocop'],
+      \ 'go': ['gofmt']
       \ }
 let g:ale_history_enabled = 0
 let g:ale_lint_on_enter = 0
@@ -176,3 +178,4 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Goto mappings
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gf <Plug>(coc-fix-current)

@@ -3,5 +3,9 @@
   "suggest.enablePreselect": true,
   "suggest.floatEnable": false,
   "suggest.maxCompleteItemCount": 8,
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "diagnostic.displayByAle": true,
+  "go.goplsOptions": {
+    "completeUnimported": true
+  }
 }

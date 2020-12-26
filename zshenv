@@ -13,6 +13,10 @@ PATH="$HOME/.nodenv/shims:${PATH}"
 # python via pyenv
 PATH="$HOME/.pyenv/shims:${PATH}"
 
+# go
+export GOPATH="$HOME/Developer/go"
+PATH="${PATH}:$GOPATH/bin"
+
 # mkdir .git/safe for trusted repositories
 PATH=".git/safe/../../node_modules/.bin:${PATH}"
 PATH=".git/safe/../../bin:${PATH}"

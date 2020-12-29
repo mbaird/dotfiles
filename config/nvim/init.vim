@@ -160,7 +160,7 @@ let g:ale_lint_on_insert_leave = 0
 " coc.vim -- LSP integration
 set completeopt=menu,menuone,longest,noinsert
 
-" Use <tab> to trigger completion and navigate up/down
+" Use <Tab> to trigger completion and navigate up/down
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -168,12 +168,16 @@ endfunction
 
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <Enter> to insert the highlighted item
 :inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
+
+" Jump to next snippet placeholder
+let g:coc_snippet_next = '<Tab>'
 
 " Goto mappings
 nmap <silent> gd <Plug>(coc-definition)

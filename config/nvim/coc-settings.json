@@ -7,5 +7,6 @@
   "diagnostic.displayByAle": true,
   "go.goplsOptions": {
     "completeUnimported": true
-  }
+  },
+  "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets"
 }

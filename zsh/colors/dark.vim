@@ -9,8 +9,8 @@ let s:gray03 = '#bcbcbc'
 let s:gray04 = '#909090'
 let s:gray05 = '#666666'
 let s:gray06 = '#333333'
-let s:gray07 = '#252525'
-let s:red    = '#ce5252'
+let s:gray07 = '#202020'
+let s:red    = '#fc6a5d'
 let s:blue   = '#5f91b9'
 
 hi! link ALEErrorSign Error

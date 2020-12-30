@@ -144,8 +144,8 @@ let g:loaded_netrwPlugin = 1
 " ale -- Use linters to fix on save
 command! Fix ALEFix
 command! Lint ALELint
-let g:ale_sign_error = '->'
-let g:ale_sign_warning = '->'
+let g:ale_sign_error = '✕'
+let g:ale_sign_warning = '➤'
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],

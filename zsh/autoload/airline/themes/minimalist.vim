@@ -1,7 +1,7 @@
 let s:theme = 'minimalist'
 
 let s:darker_gray = "#666666"
-let s:bg = "#252525"
+let s:bg = "#202020"
 let s:highlight = '#fafafa'
 
 function! airline#themes#{s:theme}#refresh()

@@ -8,7 +8,6 @@
   ap = add -p
   ci = commit -v
   co = checkout
-  s = status
   d = diff
   dc = diff --cached
   lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -21,7 +20,6 @@
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore
-  autocrlf = input
   pager = less -x1,3
 [fetch]
   prune = true

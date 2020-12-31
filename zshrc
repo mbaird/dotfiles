@@ -47,8 +47,8 @@ compdef g=git
 # Keybindings
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
-bindkey '^[b' backward-word
-bindkey '^[f' forward-word
+bindkey '^b' backward-word
+bindkey '^w' forward-word
 bindkey '^[[3~' delete-char
 
 # History

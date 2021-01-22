@@ -55,7 +55,7 @@ call s:hi("VertSplit", s:gray03)
 call s:hi("EndOfBuffer", s:gray07, s:gray07)
 call s:hi("StatusLine", s:gray06, s:gray03)
 call s:hi("Visual", s:gray01, s:gray05)
-call s:hi("Search", s:gray07, s:gray02)
+call s:hi("Search", s:gray07, s:gray03)
 
 let g:terminal_color_0 = s:gray07
 let g:terminal_color_1 = s:red

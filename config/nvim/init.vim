@@ -27,7 +27,6 @@ let mapleader = ' '
 syntax enable
 colors dark
 
-set colorcolumn=+1      " Highlight at 80 characters
 set expandtab           " Convert tabs to spaces
 set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching

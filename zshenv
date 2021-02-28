@@ -1,5 +1,5 @@
 # homebrew
-export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
 
 # dotfile bin
 PATH="$HOME/.bin:${PATH}"

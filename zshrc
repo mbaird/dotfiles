@@ -59,6 +59,8 @@ SAVEHIST=10000
 
 source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+setopt noclobber
+
 # Aliases
 alias l="ls -Alhp"
 alias mkdir="mkdir -p"

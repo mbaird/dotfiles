@@ -3,6 +3,8 @@
   email = mbaird@users.noreply.github.com
 [push]
   default = current
+[pull]
+  rebase = true
 [alias]
   aa = add --all
   ap = add -p
@@ -11,7 +13,8 @@
   d = diff
   dc = diff --cached
   lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  up = !git fetch origin --update-head-ok && git rebase origin/master
+  origin-head = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+  up = !git pull origin $(git origin-head) --rebase
   amend = commit --amend
   rc = rebase --continue
   ra = rebase --abort

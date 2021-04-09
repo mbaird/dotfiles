@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-git --no-pager log origin/master.. -n 10 --pretty='format:%h %s' |
+git --no-pager log $(git origin-head).. -n 10 --pretty='format:%h %s' |
   fzf --height=50% --layout=reverse |
   cut -d' ' -f1 |
   xargs git commit --fixup

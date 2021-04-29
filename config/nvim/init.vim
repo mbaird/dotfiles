@@ -160,6 +160,13 @@ let g:ale_lint_on_insert_leave = 0
 " coc.vim -- LSP integration
 set completeopt=menu,menuone,longest,noinsert
 
+let g:coc_global_extensions = [
+      \'coc-go',
+      \'coc-rls',
+      \'coc-snippets',
+      \'coc-solargraph',
+      \]
+
 " Use <Tab> to trigger completion and navigate up/down
 function! s:check_back_space() abort
   let col = col('.') - 1

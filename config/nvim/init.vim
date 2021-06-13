@@ -79,7 +79,7 @@ tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
 augroup AutoGroup
   autocmd!
   au VimLeave * set guicursor=a:hor30       " Reset cursor style on exit
-  au BufWritePre * :%s/\s\+$//e             " Remove trailing whitespace
+  au BufWritePre * silent! :%s/\s\+$//e     " Remove trailing whitespace
   au BufReadPost .today set syntax=markdown " Use Markdown syntax for .today
 augroup END
 

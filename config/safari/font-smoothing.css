@@ -1,0 +1,7 @@
+body {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+div.notion-app-inner[style] {
+  -webkit-font-smoothing: antialiased !important;
+}

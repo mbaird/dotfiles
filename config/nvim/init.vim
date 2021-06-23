@@ -1,6 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug '/usr/local/opt/fzf'
+Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }

@@ -17,12 +17,12 @@ PROMPT="%{%}%~%{%f%} ❯ "
 RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 
 # fuzzy finder
-source "/usr/local/opt/fzf/shell/completion.zsh"
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh"
+source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
 
 # Completion
 fpath=(
-  /usr/local/share/zsh/site-functions
+  $HOMEBREW_PREFIX/share/zsh/site-functions
   $fpath
 )
 
@@ -57,7 +57,7 @@ HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
 
-source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 setopt noclobber
 

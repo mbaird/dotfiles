@@ -1,5 +1,14 @@
 # homebrew
-export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+case $(arch) in
+ arm64) BREW_PREFIX="/opt/homebrew" ;;
+     *) BREW_PREFIX="/usr/local" ;;
+esac
+
+export HOMEBREW_PREFIX="${BREW_PREFIX}";
+export HOMEBREW_CELLAR="${BREW_PREFIX}/Cellar";
+export HOMEBREW_REPOSITORY="${BREW_PREFIX}/Homebrew";
+export HOMEBREW_NO_AUTO_UPDATE=1
+PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:${PATH}";
 
 # dotfile bin
 PATH="$HOME/.bin:${PATH}"
@@ -27,7 +36,6 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 export PAGER=less
 export LESS='-F -i -R -S -w -X -z-4'
-export HOMEBREW_NO_AUTO_UPDATE=1
 export QMK_HOME=~/Developer/qmk
 export RCRC=~/.rcrc
 

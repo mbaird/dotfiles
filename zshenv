@@ -17,9 +17,6 @@ PATH="$HOME/.pyenv/shims:${PATH}"
 export GOPATH="$HOME/Developer/go"
 PATH="${PATH}:$GOPATH/bin"
 
-# rust
-source "$HOME/.cargo/env"
-
 # mkdir .git/safe for trusted repositories
 PATH=".git/safe/../../node_modules/.bin:${PATH}"
 PATH=".git/safe/../../bin:${PATH}"

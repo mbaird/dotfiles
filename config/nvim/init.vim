@@ -13,7 +13,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale', { 'for': ['ruby', 'javascript', 'go'] }
 Plug '~/.dotfiles/zsh'
 
@@ -31,7 +30,7 @@ set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching
 set nojoinspaces        " Disable inserting 2 spaces after sentences
 set noshowcmd           " Disable showing keystrokes below statusline
-set noshowmode          " Hide mode (use `vim-airline` instead)
+set noshowmode          " Hide mode (use `statusline` instead)
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
 set numberwidth=3       " Use 3 spaces for line numbers
@@ -46,6 +45,37 @@ set termguicolors       " Enable true color
 set textwidth=80        " Ruler at 80 characters
 set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
+
+let g:currentmode={
+       \ 'n'  : 'Normal ',
+       \ 'v'  : 'Visual ',
+       \ 'V'  : 'V·Line ',
+       \ "\<C-V>" : 'V·Block ',
+       \ 'i'  : 'Insert ',
+       \ 'R'  : 'R ',
+       \ 'Rv' : 'V·Replace ',
+       \ 'c'  : 'Command ',
+       \}
+
+set statusline=
+
+set statusline+=%#TabLineSel#
+set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%{&spell?'[SPELL]':''}
+
+set statusline+=%#Error#
+set statusline+=%{&paste?'[PASTE]':''}
+set statusline+=%#StatusLine#
+
+set statusline+=\ %f
+set statusline+=%{&modified?'\ [+]':''}
+set statusline+=%{&readonly?'\ [-]':''}
+
+set statusline+=%<
+
+set statusline+=%=
+set statusline+=%{&filetype!=#''?&filetype.'\ ':'none\ '}
+set statusline+=%l/%L
 
 " Mappings
 " --------------------
@@ -95,20 +125,6 @@ let g:fzf_preview_window = ''
 
 " vim-ruby -- Syntax highlighting for Ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
-
-" vim-airline -- Statusbar & tabline
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline_extensions = ['tabline']
-let g:airline_left_alt_sep=''
-let g:airline_left_sep=''
-let g:airline_right_alt_sep=''
-let g:airline_right_sep=''
-let g:airline_section_x = ''
-let g:airline_section_y = ''
-let g:airline_section_z = ''
-let g:airline_skip_empty_sections = 1
-let g:airline_theme='minimalist'
-call airline#parts#define_accent('mode', 'none')
 
 " vim-test
 let g:test#strategy = "neovim"

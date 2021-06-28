@@ -53,9 +53,12 @@ call s:hi("CursorLineNr", s:gray02, "NONE", "bold" , "bold")
 call s:hi("Error", s:red, "NONE", "bold" , "bold")
 call s:hi("VertSplit", s:gray03)
 call s:hi("EndOfBuffer", s:gray07, s:gray07)
-call s:hi("StatusLine", s:gray06, s:gray03)
+call s:hi("StatusLine", s:gray05, s:gray07)
 call s:hi("Visual", s:gray01, s:gray05)
 call s:hi("Search", s:gray07, s:gray03)
+call s:hi("TabLine", s:gray05, s:gray07)
+call s:hi("TabLineSel", s:gray01, s:gray05)
+call s:hi("TabLineFill", "NONE", "NONE")
 
 let g:terminal_color_0 = s:gray07
 let g:terminal_color_1 = s:red

@@ -5,8 +5,5 @@
   "suggest.maxCompleteItemCount": 8,
   "suggest.noselect": false,
   "diagnostic.displayByAle": true,
-  "go.goplsOptions": {
-    "completeUnimported": true
-  },
   "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets"
 }

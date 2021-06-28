@@ -13,8 +13,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'w0rp/ale', { 'for': ['ruby', 'javascript', 'go'] }
-Plug '~/.dotfiles/zsh'
+Plug 'w0rp/ale', { 'for': ['ruby', 'javascript'] }
 
 call plug#end()
 
@@ -171,8 +170,7 @@ let g:ale_sign_warning = '➤'
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
-      \ 'ruby': ['rubocop'],
-      \ 'go': ['gofmt']
+      \ 'ruby': ['rubocop']
       \ }
 let g:ale_history_enabled = 0
 let g:ale_lint_on_enter = 0
@@ -183,8 +181,6 @@ let g:ale_lint_on_insert_leave = 0
 set completeopt=menu,menuone,longest,noinsert
 
 let g:coc_global_extensions = [
-      \'coc-go',
-      \'coc-rls',
       \'coc-snippets',
       \'coc-solargraph',
       \]

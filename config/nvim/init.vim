@@ -45,27 +45,34 @@ set textwidth=80        " Ruler at 80 characters
 set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
 
-let g:currentmode={
-       \ 'n'  : 'Normal ',
-       \ 'v'  : 'Visual ',
-       \ 'V'  : 'V·Line ',
-       \ "\<C-V>" : 'V·Block ',
-       \ 'i'  : 'Insert ',
-       \ 'R'  : 'R ',
-       \ 'Rv' : 'V·Replace ',
-       \ 'c'  : 'Command ',
-       \}
+function! GetMode()
+    let l:mode = mode()
+    if l:mode == 'n'
+        return 'NORMAL'
+    elseif l:mode == 'i'
+        return 'INSERT'
+    elseif l:mode == 'v'
+        return 'VISUAL'
+    elseif l:mode == 'c'
+        return 'COMMAND'
+    elseif l:mode == 'R'
+        return 'REPLACE'
+    elseif l:mode == 't'
+        return 'TERMINAL'
+    elseif l:mode =~ '\v(v|V||)'
+        return 'V·BLOCK'
+    else
+        return l:mode
+    endif
+endfunction
 
 set statusline=
 
 set statusline+=%#TabLineSel#
-set statusline+=\ %{toupper(g:currentmode[mode()])}
-set statusline+=%{&spell?'[SPELL]':''}
-
+set statusline+=\ %{GetMode()}%{'\ '}
 set statusline+=%#Error#
 set statusline+=%{&paste?'[PASTE]':''}
 set statusline+=%#StatusLine#
-
 set statusline+=\ %f
 set statusline+=%{&modified?'\ [+]':''}
 set statusline+=%{&readonly?'\ [-]':''}

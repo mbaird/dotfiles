@@ -11,6 +11,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale', { 'for': ['ruby', 'javascript'] }
@@ -157,10 +158,6 @@ command! Debug call ToggleTestingStrategy()
 nmap <silent> <leader>t :w \| :TestNearest<return>
 nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>
-
-" netrw.vim -- Useless shit
-let g:loaded_netrw       = 1
-let g:loaded_netrwPlugin = 1
 
 " ale -- Use linters to fix on save
 command! Fix ALEFix

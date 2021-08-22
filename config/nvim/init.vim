@@ -110,6 +110,10 @@ nnoremap <silent> <esc> :nohlsearch<return>
 " Exit (non-fzf) Terminal mode with Escape
 tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
 
+" Unmap lazy buffer switching from `vim-unimpaired
+autocmd VimEnter * nunmap [b
+autocmd VimEnter * nunmap ]b
+
 " Auto Commands
 " --------------------
 augroup AutoGroup

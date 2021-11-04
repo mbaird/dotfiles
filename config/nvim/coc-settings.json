@@ -5,5 +5,6 @@
   "suggest.maxCompleteItemCount": 8,
   "suggest.noselect": false,
   "diagnostic.displayByAle": true,
-  "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets"
+  "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets",
+  "javascript.suggest.autoImports": true
 }

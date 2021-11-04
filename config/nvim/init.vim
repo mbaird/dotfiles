@@ -121,6 +121,7 @@ augroup AutoGroup
   au VimLeave * set guicursor=a:hor30       " Reset cursor style on exit
   au BufWritePre * silent! :%s/\s\+$//e     " Remove trailing whitespace
   au BufReadPost .today set syntax=markdown " Use Markdown syntax for .today
+  au FileType javascript set filetype=javascriptreact
 augroup END
 
 " Plugin Config
@@ -184,6 +185,7 @@ set completeopt=menu,menuone,longest,noinsert
 let g:coc_global_extensions = [
       \'coc-snippets',
       \'coc-solargraph',
+      \'coc-tsserver',
       \]
 
 " Use <Tab> to trigger completion and navigate up/down

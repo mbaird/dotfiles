@@ -97,6 +97,7 @@ nnoremap <C-l> <C-w>l
 
 " Quick edit vim config
 nnoremap <leader>v :e $MYVIMRC<return>
+command! Reload source $MYVIMRC
 
 " Quick save
 nnoremap <esc><esc> :w<return>

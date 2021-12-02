@@ -164,6 +164,7 @@ command! Debug call ToggleTestingStrategy()
 nmap <silent> <leader>t :w \| :TestNearest<return>
 nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>
+nmap <silent> <leader>m :w \| :Make<return>
 
 " ale -- Use linters to fix on save
 command! Fix ALEFix

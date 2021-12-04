@@ -13,7 +13,8 @@ autoload add-zsh-hook
 add-zsh-hook precmd vcs_info
 
 setopt prompt_subst
-PROMPT="%{%}%~%{%f%} ❯ "
+[[ $SSH_CONNECTION ]] && local remote='%F{red}${HOST:l}%f '
+PROMPT="${remote}%{%}%~%{%f%} %F{white}❯%f "
 RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 
 # fuzzy finder

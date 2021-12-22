@@ -125,6 +125,12 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 " vim-test
 let g:test#strategy = "basic"
 
+command! Make call s:make(join(map(split(&makeprg), 'expand(v:val)')))
+
+function! s:make(cmd) abort
+  call test#strategy#basic(a:cmd)
+endfunction
+
 nmap <silent> <leader>t :w \| :TestNearest<return>
 nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>

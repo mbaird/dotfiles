@@ -45,6 +45,7 @@ set termguicolors       " Enable true color
 set textwidth=80        " Ruler at 80 characters
 set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
+set scrolloff=3         " Keep lines of context when scrolling
 
 function! GetMode()
     let l:mode = mode()

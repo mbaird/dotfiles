@@ -35,7 +35,7 @@ set numberwidth=3       " Use 3 spaces for line numbers
 set relativenumber      " Use relative numnbering
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
-set shortmess=Iat       " Disable intro message, truncate shortmessages
+set shortmess=IatF      " Disable intro message, truncate shortmessages
 set smartcase           " Ignore case if all lowercase when searching
 set smartindent         " Smarter auto indenting
 set tabstop=2           " Number of spaces per tab

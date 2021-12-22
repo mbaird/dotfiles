@@ -30,7 +30,6 @@ set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching
 set nojoinspaces        " Disable inserting 2 spaces after sentences
 set noshowcmd           " Disable showing keystrokes below statusline
-set noshowmode          " Hide mode (use `statusline` instead)
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
 set numberwidth=3       " Use 3 spaces for line numbers
@@ -47,40 +46,12 @@ set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
 set scrolloff=3         " Keep lines of context when scrolling
 
-function! GetMode()
-    let l:mode = mode()
-    if l:mode == 'n'
-        return 'NORMAL'
-    elseif l:mode == 'i'
-        return 'INSERT'
-    elseif l:mode == 'v'
-        return 'VISUAL'
-    elseif l:mode == 'c'
-        return 'COMMAND'
-    elseif l:mode == 'R'
-        return 'REPLACE'
-    elseif l:mode == 't'
-        return 'TERMINAL'
-    elseif l:mode =~# '\v(v|V||s|S|)'
-        return 'V·BLOCK'
-    else
-        return l:mode
-    endif
-endfunction
-
 set statusline=
-
-set statusline+=%#TabLineSel#
-set statusline+=\ %{GetMode()}%{'\ '}
-set statusline+=%#Error#
-set statusline+=%{&paste?'[PASTE]':''}
 set statusline+=%#StatusLine#
 set statusline+=\ %f
 set statusline+=%{&modified?'\ [+]':''}
 set statusline+=%{&readonly?'\ [-]':''}
-
 set statusline+=%<
-
 set statusline+=%=
 
 if !empty($SSH_CONNECTION)
@@ -89,7 +60,9 @@ if !empty($SSH_CONNECTION)
   set statusline+=\ %{tolower(hostname)}%{'\ '}
   set statusline+=%#StatusLine#
 endif
+
 set statusline+=%{&filetype!=#''?&filetype.'\ ':'none\ '}
+set statusline+=%2c,
 set statusline+=%l/%L
 
 " Mappings

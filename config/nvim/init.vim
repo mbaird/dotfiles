@@ -94,7 +94,7 @@ nnoremap <silent> <esc> :nohlsearch<return>
 " Exit (non-fzf) Terminal mode with Escape
 tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
 
-" Unmap lazy buffer switching from `vim-unimpaired
+" Unmap lazy buffer switching from `vim-unimpaired`
 autocmd VimEnter * nunmap [b
 autocmd VimEnter * nunmap ]b
 
@@ -113,9 +113,6 @@ augroup END
 " fzf.vim -- Fuzzy file/buffer finder
 nnoremap ff :Files<return>
 nnoremap fb :Buffers<return>
-" Hide statusline
-autocmd FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 let g:fzf_preview_window = ''
 

@@ -139,6 +139,7 @@ nmap <silent> <leader>m :w \| :Make<return>
 " ale -- Use linters to fix on save
 command! Fix ALEFix
 command! Lint ALELint
+nmap <silent> <leader>f :Fix<return>
 let g:ale_sign_error = '✕'
 let g:ale_sign_warning = '➤'
 let g:ale_disable_lsp = 1
@@ -174,7 +175,7 @@ inoremap <silent><expr> <Tab>
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <Enter> to insert the highlighted item
-:inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
+inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
 
 " Jump to next snippet placeholder
 let g:coc_snippet_next = '<Tab>'

@@ -8,6 +8,7 @@ export HOMEBREW_PREFIX="${BREW_PREFIX}";
 export HOMEBREW_CELLAR="${BREW_PREFIX}/Cellar";
 export HOMEBREW_REPOSITORY="${BREW_PREFIX}/Homebrew";
 export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ENV_HINTS=1
 PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:${PATH}";
 
 # dotfile bin

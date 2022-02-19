@@ -5,7 +5,6 @@ Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'thalesmello/lkml.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -25,9 +24,7 @@ syntax enable
 colors dark
 
 set expandtab           " Convert tabs to spaces
-set hidden              " Prevent unloading abandoned buffers
 set ignorecase          " Ignore case when searching
-set nojoinspaces        " Disable inserting 2 spaces after sentences
 set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
@@ -37,11 +34,9 @@ set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set shortmess=IatF      " Disable intro message, truncate shortmessages
 set smartcase           " Ignore case if all lowercase when searching
-set smartindent         " Smarter auto indenting
 set tabstop=2           " Number of spaces per tab
 set termguicolors       " Enable true color
 set textwidth=80        " Ruler at 80 characters
-set title               " Set the window title
 set ttimeoutlen=10      " Time to wait for keycode sequences
 set scrolloff=3         " Keep lines of context when scrolling
 
@@ -104,7 +99,6 @@ augroup AutoGroup
   autocmd!
   au VimLeave * set guicursor=a:hor30       " Reset cursor style on exit
   au BufWritePre * silent! :%s/\s\+$//e     " Remove trailing whitespace
-  au BufReadPost .today set syntax=markdown " Use Markdown syntax for .today
   au FileType javascript set filetype=javascriptreact
 augroup END
 

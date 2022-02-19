@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '$HOMEBREW_PREFIX/opt/fzf'
+Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -13,7 +14,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'w0rp/ale', { 'for': ['ruby', 'javascript'] }
 
 call plug#end()
 

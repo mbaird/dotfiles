@@ -136,6 +136,7 @@ let g:ale_sign_warning = '➤'
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
       \ 'javascriptreact': ['eslint'],
+      \ 'typescript': ['eslint'],
       \ 'ruby': ['rubocop']
       \ }
 let g:ale_history_enabled = 0

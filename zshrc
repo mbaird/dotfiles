@@ -1,7 +1,5 @@
-# Reload env
 source ~/.zshenv
 
-# Prompt with VCS
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' unstagedstr "*"
@@ -17,11 +15,9 @@ setopt prompt_subst
 PROMPT="${remote}%{%}%~%{%f%} %F{white}❯%f "
 RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 
-# fuzzy finder
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh"
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
 
-# Completion
 fpath=(
   $HOMEBREW_PREFIX/share/zsh/site-functions
   $fpath
@@ -35,7 +31,6 @@ else
   compinit -C;
 fi;
 
-# g is for git
 g() {
   if [[ $# -gt 0 ]]; then
     git "$@"
@@ -45,14 +40,12 @@ g() {
 }
 compdef g=git
 
-# Keybindings
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey '^b' backward-word
 bindkey '^w' forward-word
 bindkey '^[[3~' delete-char
 
-# History
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zhistory
 HISTSIZE=10000
@@ -61,9 +54,9 @@ SAVEHIST=10000
 source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,normal
 
+# Prevent overwriting files with `>` operator
 setopt noclobber
 
-# Aliases
 alias l="ls -Alhp"
 alias mkdir="mkdir -p"
 alias dev="cd ~/Developer"

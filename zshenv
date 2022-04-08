@@ -19,9 +19,13 @@ PATH="$HOME/.rbenv/shims:${PATH}"
 
 # node via nodenv
 PATH="$HOME/.nodenv/shims:${PATH}"
+PATH="$HOME/.yarn/bin:${PATH}"
 
 # python via pyenv
 PATH="$HOME/.pyenv/shims:${PATH}"
+
+# cargo binaries
+PATH="$HOME/.cargo/bin:${PATH}"
 
 # mkdir .git/safe for trusted repositories
 PATH=".git/safe/../../node_modules/.bin:${PATH}"

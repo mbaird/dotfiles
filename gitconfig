@@ -1,6 +1,7 @@
 [user]
   name  = Michael Baird
   email = mbaird@users.noreply.github.com
+	signingkey = DAD36D4E8A682250
 [push]
   default = current
 [pull]
@@ -29,3 +30,5 @@
 [rebase]
   autosquash = true
   autostash = true
+[commit]
+  gpgsign = true

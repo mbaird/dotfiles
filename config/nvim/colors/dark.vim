@@ -21,8 +21,6 @@ hi! link ErrorMsg Error
 hi! link Identifier Normal
 hi! link LineNr PreProc
 hi! link MatchParen Visual
-hi! link Pmenu Visual
-hi! link PmenuSel Search
 hi! link Question Title
 hi! link SignColumn PreProc
 hi! link Special Normal
@@ -60,6 +58,8 @@ call s:hi("Search", s:gray07, s:gray03)
 call s:hi("TabLine", s:gray05, s:gray07)
 call s:hi("TabLineSel", s:gray01, s:gray05)
 call s:hi("TabLineFill", "NONE", "NONE")
+call s:hi("PMenu", s:gray01, s:gray06)
+call s:hi("PMenuSel", s:gray06, s:gray01)
 
 let g:terminal_color_0 = s:gray07
 let g:terminal_color_1 = s:red

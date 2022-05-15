@@ -77,8 +77,9 @@ command! Reload source $MYVIMRC
 " Quick save
 nnoremap <esc><esc> :w<return>
 
-" Close buffer without closing the window
-nnoremap <silent> <leader>d :bp\|bd #<return>
+" Close buffer
+nnoremap <silent> <leader>d :bd<return>
+nnoremap <silent> <leader>D :bd!<return>
 
 " Close the current tab
 nnoremap <silent> gx :tabclose<return>

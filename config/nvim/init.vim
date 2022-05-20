@@ -13,6 +13,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'mbaird/wiki.vim'
 
 call plug#end()
 
@@ -129,6 +130,11 @@ nmap <silent> <leader>t :w \| :TestNearest<return>
 nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>
 nmap <silent> <leader>m :w \| :Make<return>
+
+" wiki.vim
+let g:wiki_root = '~/.notes'
+let g:wiki_filetypes = ['md']
+let g:wiki_index_name = '0-home'
 
 " ale -- Use linters to fix on save
 command! Fix ALEFix

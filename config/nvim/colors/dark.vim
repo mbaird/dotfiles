@@ -60,6 +60,9 @@ call s:hi("TabLineSel", s:gray01, s:gray05)
 call s:hi("TabLineFill", "NONE", "NONE")
 call s:hi("PMenu", s:gray01, s:gray06)
 call s:hi("PMenuSel", s:gray06, s:gray01)
+call s:hi("PmenuSbar", "NONE", s:gray05)
+call s:hi("PmenuThumb", "NONE", s:gray02)
+call s:hi("CocMarkdownLink", s:gray02, "NONE", "bold" , "bold")
 
 let g:terminal_color_0 = s:gray07
 let g:terminal_color_1 = s:red

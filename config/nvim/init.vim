@@ -4,7 +4,7 @@ Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -155,6 +155,7 @@ let g:ale_lint_on_insert_leave = 0
 
 " coc.vim -- LSP integration
 set completeopt=menu,menuone,longest,noinsert
+set pumheight=10
 
 let g:coc_global_extensions = [
       \'coc-snippets',
@@ -163,16 +164,11 @@ let g:coc_global_extensions = [
       \]
 
 " Use <Tab> to trigger completion and navigate up/down
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
+      \ coc#expandableOrJumpable() ?
+      \   "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
+      \   CheckBackspace() ? "\<Tab>" : coc#refresh()
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <Enter> to insert the highlighted item
@@ -180,6 +176,22 @@ inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
 
 " Jump to next snippet placeholder
 let g:coc_snippet_next = '<Tab>'
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 
 " Goto mappings
 nmap <silent> gd <Plug>(coc-definition)

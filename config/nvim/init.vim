@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '$HOMEBREW_PREFIX/opt/fzf'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
@@ -152,6 +153,12 @@ let g:ale_history_enabled = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
+
+" splitjoin.vim
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_do_block_split = 0
+let g:splitjoin_ruby_options_as_arguments = 1
 
 " coc.vim -- LSP integration
 set completeopt=menu,menuone,longest,noinsert

@@ -118,7 +118,6 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-test
 let g:test#strategy = "basic"
-let g:test#javascript#runner = 'vitest'
 let test#custom_runners = {'javascript': ['vitest']}
 
 command! Make call s:make(join(map(split(&makeprg), 'expand(v:val)')))

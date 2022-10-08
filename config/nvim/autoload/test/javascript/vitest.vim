@@ -18,9 +18,9 @@ function! test#javascript#vitest#build_position(type, position) abort
     if !empty(name)
       let name = '-t '.shellescape(name, 1)
     endif
-    return ['--run', name, a:position['file']]
+    return ['--run', '--dir .', name, a:position['file']]
   elseif a:type ==# 'file'
-    return ['--run', a:position['file']]
+    return ['--run', '--dir .', a:position['file']]
   else
     return []
   endif

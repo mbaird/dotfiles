@@ -26,6 +26,10 @@ PATH="${HOME}/.cargo/bin:${PATH}"
 PATH=".git/safe/../../node_modules/.bin:${PATH}"
 PATH=".git/safe/../../bin:${PATH}"
 
+# android sdk
+PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
 export EDITOR=nvim
 export VISUAL=$EDITOR

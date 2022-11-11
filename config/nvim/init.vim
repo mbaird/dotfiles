@@ -203,4 +203,9 @@ endfunction
 " Goto mappings
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gf <Plug>(coc-fix-current)
+
+" Apply codeaction to buffer
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Apply AutoFix to the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)

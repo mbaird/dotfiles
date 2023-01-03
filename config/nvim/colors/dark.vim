@@ -11,7 +11,7 @@ let s:gray05 = '#666666'
 let s:gray06 = '#333333'
 let s:gray07 = '#191919'
 let s:red    = '#fc6a5d'
-let s:blue   = '#5d79c8'
+let s:blue   = '#5b7dde'
 
 hi! link ALEErrorSign Error
 hi! link ALEWarningSign Error

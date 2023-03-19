@@ -45,14 +45,6 @@ set statusline+=%{&modified?'\ [+]':''}
 set statusline+=%{&readonly?'\ [-]':''}
 set statusline+=%<
 set statusline+=%=
-
-if !empty($SSH_CONNECTION)
-  let hostname=trim(system('hostname -s'))
-  set statusline+=%#ErrorLight#
-  set statusline+=\ %{tolower(hostname)}%{'\ '}
-  set statusline+=%#StatusLine#
-endif
-
 set statusline+=%{&filetype!=#''?&filetype.'\ ':'none\ '}
 set statusline+=%2c,
 set statusline+=%l/%L

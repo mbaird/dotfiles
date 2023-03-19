@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
@@ -125,6 +126,9 @@ require('nvim-treesitter.configs').setup({
       scope_incremental = ";",
       node_decremental = ",",
     },
+  },
+  context_commentstring = {
+    enable = true
   }
 })
 EOF

@@ -6,6 +6,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
+Plug 'kylechui/nvim-surround'
 Plug 'mbaird/wiki.vim'
 Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -15,7 +16,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 call plug#end()
@@ -113,6 +113,11 @@ nnoremap ff :Files<return>
 nnoremap fb :Buffers<return>
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 let g:fzf_preview_window = []
+
+" nvim-surround
+lua << EOF
+require("nvim-surround").setup()
+EOF
 
 " nvim-treesitter
 lua << EOF

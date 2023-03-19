@@ -7,6 +7,7 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'mbaird/wiki.vim'
 Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -111,6 +112,22 @@ nnoremap ff :Files<return>
 nnoremap fb :Buffers<return>
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 let g:fzf_preview_window = []
+
+" nvim-treesitter
+lua << EOF
+require('nvim-treesitter.configs').setup({
+  auto_install = true,
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = false,
+      node_incremental = ".",
+      scope_incremental = ";",
+      node_decremental = ",",
+    },
+  }
+})
+EOF
 
 " splitjoin.vim
 let g:splitjoin_ruby_curly_braces = 0

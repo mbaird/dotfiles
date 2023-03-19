@@ -5,6 +5,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
+Plug 'mbaird/wiki.vim'
 Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -14,19 +15,15 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'mbaird/wiki.vim'
 
 call plug#end()
 
-" General
-" --------------------
 let mapleader = ' '
 
 syntax enable
 colors dark
 
 set expandtab           " Convert tabs to spaces
-set ignorecase          " Ignore case when searching
 set noshowcmd           " Disable showing keystrokes below statusline
 set noswapfile          " Disable swapfile
 set number              " Show the current line number
@@ -35,10 +32,9 @@ set relativenumber      " Use relative numnbering
 set shiftround          " Use multiple of shiftwidth when indenting
 set shiftwidth=2        " Use 2 spaces for auto indent
 set shortmess=IatF      " Disable intro message, truncate shortmessages
-set smartcase           " Ignore case if all lowercase when searching
 set tabstop=2           " Number of spaces per tab
 set termguicolors       " Enable true color
-set textwidth=80        " Ruler at 80 characters
+set textwidth=100       " Reasonable wrap width
 set ttimeoutlen=10      " Time to wait for keycode sequences
 set scrolloff=3         " Keep lines of context when scrolling
 
@@ -61,8 +57,6 @@ set statusline+=%{&filetype!=#''?&filetype.'\ ':'none\ '}
 set statusline+=%2c,
 set statusline+=%l/%L
 
-" Mappings
-" --------------------
 " Switch to last viewed buffer
 nnoremap <leader><leader> <c-^>
 
@@ -74,7 +68,6 @@ nnoremap <C-l> <C-w>l
 
 " Quick edit vim config
 nnoremap <leader>v :e $MYVIMRC<return>
-command! Reload source $MYVIMRC
 
 " Quick save
 nnoremap <esc><esc> :w<return>
@@ -96,8 +89,6 @@ tnoremap <expr> <esc> &filetype == 'fzf' ? "\<esc>" : "\<c-\>\<c-n>"
 autocmd VimEnter * nunmap [b
 autocmd VimEnter * nunmap ]b
 
-" Auto Commands
-" --------------------
 augroup AutoGroup
   autocmd!
   au VimLeave * set guicursor=a:hor30       " Reset cursor style on exit
@@ -105,15 +96,37 @@ augroup AutoGroup
   au FileType javascript set filetype=javascriptreact
 augroup END
 
-" Plugin Config
-" -------------
-" fzf.vim -- Fuzzy file/buffer finder
+" ale
+command! Fix ALEFix
+command! Lint ALELint
+nmap <silent> <leader>f :Fix<return>
+let g:ale_sign_error = '✕'
+let g:ale_sign_warning = '➤'
+let g:ale_disable_lsp = 1
+let g:ale_fixers = {
+      \ 'javascriptreact': ['eslint'],
+      \ 'typescriptreact': ['eslint'],
+      \ 'typescript': ['eslint'],
+      \ 'ruby': ['rubocop']
+      \ }
+let g:ale_history_enabled = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+
+" fzf.vim
 nnoremap ff :Files<return>
 nnoremap fb :Buffers<return>
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
-let g:fzf_preview_window = ''
+let g:fzf_preview_window = []
 
-" vim-ruby -- Syntax highlighting for Ruby
+" splitjoin.vim
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_do_block_split = 0
+let g:splitjoin_ruby_options_as_arguments = 1
+
+" vim-ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
 
 " vim-test
@@ -136,31 +149,7 @@ let g:wiki_root = '~/.notes'
 let g:wiki_filetypes = ['md']
 let g:wiki_index_name = '0-home'
 
-" ale -- Use linters to fix on save
-command! Fix ALEFix
-command! Lint ALELint
-nmap <silent> <leader>f :Fix<return>
-let g:ale_sign_error = '✕'
-let g:ale_sign_warning = '➤'
-let g:ale_disable_lsp = 1
-let g:ale_fixers = {
-      \ 'javascriptreact': ['eslint'],
-      \ 'typescriptreact': ['eslint'],
-      \ 'typescript': ['eslint'],
-      \ 'ruby': ['rubocop']
-      \ }
-let g:ale_history_enabled = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-
-" splitjoin.vim
-let g:splitjoin_ruby_curly_braces = 0
-let g:splitjoin_ruby_hanging_args = 0
-let g:splitjoin_ruby_do_block_split = 0
-let g:splitjoin_ruby_options_as_arguments = 1
-
-" coc.vim -- LSP integration
+" coc.vim
 set completeopt=menu,menuone,longest,noinsert
 set pumheight=10
 

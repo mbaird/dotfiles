@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'kylechui/nvim-surround'
+Plug 'mbaird/monochrome.nvim'
 Plug 'mbaird/wiki.vim'
 Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -23,7 +24,7 @@ call plug#end()
 let mapleader = ' '
 
 syntax enable
-colors dark
+colors monochrome
 
 set expandtab           " Convert tabs to spaces
 set noshowcmd           " Disable showing keystrokes below statusline

@@ -1,23 +1,31 @@
-dotfiles
-==============
+# dotfiles
 
-Install
--------
+## Install
 
 Clone dotfiles onto your laptop:
 
-    git clone git@github.com:mbaird/dotfiles.git ~/.dotfiles
+```bash
+git clone git@github.com:mbaird/dotfiles.git ~/.dotfiles
+```
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
-    brew tap thoughtbot/formulae
-    brew install rcm
+```bash
+brew tap thoughtbot/formulae
+brew install rcm
+```
 
 Install the dotfiles:
 
-    env RCRC=$HOME/.dotfiles/rcrc rcup
+```bash
+env RCRC=$HOME/.dotfiles/rcrc rcup
+```
 
+Regenerate iTerm2 theme:
 
-Resources
----------
+```lua
+local M = require 'monochrome.templates.init'; M.render('docs/monochrome.itermcolors')
+```
+
+## Resources
 * [How to profile your zsh startup time](https://esham.io/2018/02/zsh-profiling)

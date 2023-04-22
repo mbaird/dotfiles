@@ -1,19 +1,8 @@
 {
-  "suggest.autoTrigger": "none",
-  "suggest.enablePreselect": true,
-  "suggest.floatEnable": false,
-  "suggest.noselect": false,
   "diagnostic.displayByAle": true,
-  "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets",
   "javascript.suggest.autoImports": true,
-  "suggest.disableMenu": true,
-  "suggest.disableMenuShortcut": true,
-  "suggest.completionItemKindLabels": {
-    "class": "[C]",
-    "constant": "[c]",
-    "function": "[F]",
-    "method": "[m]",
-    "module": "[M]",
-    "variable": "[V]"
-  }
+  "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets",
+  "suggest.autoTrigger": "none",
+  "suggest.enableFloat": false,
+  "suggest.enablePreselect": true
 }

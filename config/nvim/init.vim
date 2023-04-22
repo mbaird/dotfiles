@@ -10,7 +10,7 @@ Plug 'kylechui/nvim-surround'
 Plug 'lervag/wiki.vim'
 Plug 'madox2/vim-ai'
 Plug 'mbaird/monochrome.nvim'
-Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -177,7 +177,6 @@ augroup WikiAutoGroup
 augroup END
 
 " coc.vim
-set completeopt=menu,menuone,longest,noinsert
 set pumheight=10
 
 let g:coc_global_extensions = [
@@ -188,20 +187,19 @@ let g:coc_global_extensions = [
 
 " Use <Tab> to trigger completion and navigate up/down
 inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ coc#expandableOrJumpable() ?
-      \   "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
-      \   CheckBackspace() ? "\<Tab>" : coc#refresh()
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ coc#expandableOrJumpable() ?
+  \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" Use <Enter> to insert the highlighted item
-inoremap <expr> <return> pumvisible() ? "\<C-y>" : "\<C-g>u\<return>"
-
-" Jump to next snippet placeholder
-let g:coc_snippet_next = '<Tab>'
+" Use <return> to insert the highlighted item
+inoremap <silent><expr> <return> coc#pum#visible() ? coc#pum#confirm()
+  \: "\<C-g>u\<return>\<c-r>=coc#on_enter()\<return>"
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
+nnoremap <silent> K :call ShowDocumentation()<return>
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -221,7 +219,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " Apply codeaction to buffer
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>ac <Plug>(coc-codeaction)
 
-" Apply AutoFix to the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+" Apply AutoFix to the current line
+nmap <leader>qf <Plug>(coc-fix-current)

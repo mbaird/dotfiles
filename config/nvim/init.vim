@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
@@ -181,6 +180,8 @@ augroup END
 set pumheight=10
 
 let g:coc_global_extensions = [
+      \'coc-eslint',
+      \'coc-prettier',
       \'coc-snippets',
       \'coc-solargraph',
       \'coc-tsserver',
@@ -229,3 +230,12 @@ nmap <leader>qf <Plug>(coc-fix-current)
 nnoremap <silent><nowait> <leader>cc :<C-u>CocFzfList commands<return>
 nnoremap <silent><nowait> <leader>fs :<C-u>CocFzfList symbols<return>
 nnoremap <silent><nowait> <leader>fr :<C-u>CocFzfListResume<return>
+
+" Format/fix
+command! -nargs=0 Format :call CocActionAsync('format')
+nmap <leader>f :Format<Return>
+nmap <leader>as <Plug>(coc-codeaction-source)
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)

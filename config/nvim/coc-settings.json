@@ -1,7 +1,14 @@
 {
-  "diagnostic.displayByAle": true,
+  "diagnostic.errorSign": "✕",
+  "diagnostic.infoSign": "‣",
+  "diagnostic.messageDelay": 1000,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.warningSign": "✕",
   "javascript.suggest.autoImports": true,
   "snippets.userSnippetsDirectory": "$HOME/.config/coc/snippets",
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
   "suggest.autoTrigger": "none",
   "suggest.enableFloat": false,
   "suggest.enablePreselect": true

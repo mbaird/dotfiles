@@ -4,6 +4,7 @@ Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'dense-analysis/ale'
+Plug 'antoinemadec/coc-fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'kylechui/nvim-surround'
@@ -223,3 +224,8 @@ nmap <leader>ac <Plug>(coc-codeaction)
 
 " Apply AutoFix to the current line
 nmap <leader>qf <Plug>(coc-fix-current)
+
+" coc-fzf
+nnoremap <silent><nowait> <leader>cc :<C-u>CocFzfList commands<return>
+nnoremap <silent><nowait> <leader>fs :<C-u>CocFzfList symbols<return>
+nnoremap <silent><nowait> <leader>fr :<C-u>CocFzfListResume<return>

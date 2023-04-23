@@ -43,7 +43,6 @@ set ttimeoutlen=10      " Time to wait for keycode sequences
 set scrolloff=3         " Keep lines of context when scrolling
 
 set statusline=
-set statusline+=%#StatusLine#
 set statusline+=\ %f
 set statusline+=%{&modified?'\ [+]':''}
 set statusline+=%{&readonly?'\ [-]':''}

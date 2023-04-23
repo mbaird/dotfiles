@@ -8,7 +8,7 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'kylechui/nvim-surround'
 Plug 'lervag/wiki.vim'
-Plug 'madox2/vim-ai', { 'do': './install.sh' }
+Plug 'madox2/vim-ai'
 Plug 'mbaird/monochrome.nvim'
 Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.81' }
 Plug 'nvim-treesitter/nvim-treesitter'

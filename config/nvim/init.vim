@@ -91,24 +91,6 @@ augroup AutoGroup
   au FileType javascript set filetype=javascriptreact
 augroup END
 
-" ale
-command! Fix ALEFix
-command! Lint ALELint
-nmap <silent> <leader>f :Fix<return>
-let g:ale_sign_error = '✕'
-let g:ale_sign_warning = '➤'
-let g:ale_disable_lsp = 1
-let g:ale_fixers = {
-      \ 'javascriptreact': ['eslint'],
-      \ 'typescriptreact': ['eslint'],
-      \ 'typescript': ['eslint'],
-      \ 'ruby': ['rubocop']
-      \ }
-let g:ale_history_enabled = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-
 " fzf.vim
 nnoremap ff :Files<return>
 nnoremap fb :Buffers<return>

@@ -3,7 +3,6 @@
 .env
 .gems
 .node-version
-.projections.json
 .rbenv-gemsets
 .ruby-version
 .solargraph.yml

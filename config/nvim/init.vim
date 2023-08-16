@@ -7,7 +7,6 @@ Plug 'antoinemadec/coc-fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'kylechui/nvim-surround'
-Plug 'lervag/wiki.vim'
 Plug 'madox2/vim-ai'
 Plug 'mbaird/monochrome.nvim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -143,19 +142,6 @@ nmap <silent> <leader>t :w \| :TestNearest<return>
 nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>
 nmap <silent> <leader>m :w \| :Make<return>
-
-" wiki.vim
-let g:wiki_global_load = 0
-let g:wiki_root = '~/.notes'
-let g:wiki_filetypes = ['md']
-let g:wiki_index_name = 'Home'
-let g:wiki_select_method = 'fzf'
-
-augroup WikiAutoGroup
-  autocmd!
-  autocmd User WikiBufferInitialized silent! exec "lcd " . g:wiki_root
-  autocmd User WikiBufferInitialized set textwidth=999999
-augroup END
 
 " coc.vim
 set pumheight=10

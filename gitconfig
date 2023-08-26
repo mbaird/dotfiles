@@ -1,7 +1,7 @@
 [user]
   name  = Michael Baird
   email = mbaird@users.noreply.github.com
-	signingkey = DAD36D4E8A682250
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIM92O2lB7hL8Ip0MPZhHxZFLzjQ3TJ65nzakWnte+uo
 [push]
   default = current
 [pull]
@@ -32,3 +32,7 @@
   autostash = true
 [commit]
   gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

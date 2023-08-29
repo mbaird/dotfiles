@@ -3,13 +3,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'antoinemadec/coc-fzf'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'kylechui/nvim-surround'
 Plug 'madox2/vim-ai'
 Plug 'mbaird/monochrome.nvim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -143,66 +141,3 @@ nmap <silent> <leader>T :w \| :TestFile<return>
 nmap <silent> <leader>l :w \| :TestLast<return>
 nmap <silent> <leader>m :w \| :Make<return>
 
-" coc.vim
-set pumheight=10
-
-let g:coc_global_extensions = [
-      \'coc-eslint',
-      \'coc-prettier',
-      \'coc-snippets',
-      \'coc-solargraph',
-      \'coc-tsserver',
-      \]
-
-" Use <Tab> to trigger completion and navigate up/down
-inoremap <silent><expr> <Tab>
-  \ coc#pum#visible() ? coc#pum#next(1) :
-  \ coc#expandableOrJumpable() ?
-  \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<return>" :
-  \ CheckBackspace() ? "\<Tab>" :
-  \ coc#refresh()
-inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Use <return> to insert the highlighted item
-inoremap <silent><expr> <return> coc#pum#visible() ? coc#pum#confirm()
-  \: "\<C-g>u\<return>\<c-r>=coc#on_enter()\<return>"
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<return>
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
-
-" Goto mappings
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-
-" Apply codeaction to buffer
-nmap <leader>ac <Plug>(coc-codeaction)
-
-" Apply AutoFix to the current line
-nmap <leader>qf <Plug>(coc-fix-current)
-
-" coc-fzf
-nnoremap <silent><nowait> <leader>cc :<C-u>CocFzfList commands<return>
-nnoremap <silent><nowait> <leader>fs :<C-u>CocFzfList symbols<return>
-nnoremap <silent><nowait> <leader>fr :<C-u>CocFzfListResume<return>
-
-" Format/fix
-command! -nargs=0 Format :call CocActionAsync('format')
-nmap <leader>f :Format<Return>
-nmap <leader>as <Plug>(coc-codeaction-source)
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)

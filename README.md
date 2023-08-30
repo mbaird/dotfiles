@@ -27,5 +27,12 @@ Regenerate iTerm2 theme:
 local M = require 'monochrome.templates.init'; M.render('docs/monochrome.itermcolors')
 ```
 
+Install Language Servers:
+
+```bash
+  gem install solargraph solargraph-rails
+  npm install -g typescript typescript-language-server vscode-langservers-extracted
+```
+
 ## Resources
 * [How to profile your zsh startup time](https://esham.io/2018/02/zsh-profiling)

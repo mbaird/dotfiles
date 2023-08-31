@@ -30,6 +30,7 @@ PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
+export FZF_CTRL_T_COMMAND="rg --files"
 export EDITOR=nvim
 export VISUAL=$EDITOR
 export PAGER=less

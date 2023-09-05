@@ -2,8 +2,4 @@
 .bundle
 .env
 .gems
-.node-version
-.rbenv-gemsets
-.ruby-version
-.solargraph.yml
 todo.md

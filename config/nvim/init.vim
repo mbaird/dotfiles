@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'embear/vim-localvimrc'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
@@ -239,6 +240,10 @@ let g:splitjoin_ruby_options_as_arguments = 1
 
 " vim-ruby
 let g:ruby_path = system('echo $HOME/.rbenv/shims') " Faster init
+
+" vim-localvimrc
+let g:localvimrc_ask = 0
+let g:localvimrc_sandbox = 0
 
 " vim-test
 let g:test#strategy = "basic"

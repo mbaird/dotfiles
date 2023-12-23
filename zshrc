@@ -52,7 +52,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,normal
 
 # Prevent overwriting files with `>` operator
 setopt noclobber

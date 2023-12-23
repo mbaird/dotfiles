@@ -194,3 +194,12 @@ cmp.setup({
     { name = 'buffer' },
   })
 })
+
+-- copilot.vim
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("<return>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_enabled = false
+vim.cmd.highlight({ 'link', 'CopilotSuggestion', 'DiagnosticWarn' })

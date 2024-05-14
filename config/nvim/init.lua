@@ -94,7 +94,7 @@ vim.keymap.set('n', '<leader>m', '<cmd>w <bar> Make<return>')
 
 -- nvim-treesitter
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'lua', 'vim', 'json', 'yaml' },
+  ensure_installed = { 'lua', 'vim', 'json', 'yaml', 'vimdoc' },
   auto_install = true,
   indent = {
     enable = true,

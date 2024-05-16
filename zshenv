@@ -5,6 +5,9 @@ export HOMEBREW_REPOSITORY="${BREW_PREFIX}/Homebrew";
 export HOMEBREW_NO_ENV_HINTS=1
 PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:${PATH}";
 
+# local binaries
+PATH="${HOME}/.local/bin:${PATH}"
+
 # dotfile binaries
 PATH="${HOME}/.bin:${PATH}"
 

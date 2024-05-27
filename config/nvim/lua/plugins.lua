@@ -7,7 +7,6 @@ require('paq') {
   {'hrsh7th/nvim-cmp'},
   {'junegunn/fzf'},
   {'junegunn/fzf.vim'},
-  {'madox2/vim-ai'},
   {'mbaird/monochrome.nvim'},
   {'neovim/nvim-lspconfig'},
   {'nvim-treesitter/nvim-treesitter'},

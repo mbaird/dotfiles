@@ -13,7 +13,6 @@ require('paq') {
   {'ojroques/nvim-lspfuzzy'},
   {'savq/paq-nvim'},
   {'stevearc/oil.nvim'},
-  {'tpope/vim-commentary'},
   {'tpope/vim-eunuch'},
   {'tpope/vim-fugitive'},
   {'tpope/vim-projectionist'},

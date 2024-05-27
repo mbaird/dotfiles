@@ -12,7 +12,6 @@ require('paq') {
   {'nvim-treesitter/nvim-treesitter'},
   {'ojroques/nvim-lspfuzzy'},
   {'savq/paq-nvim'},
-  {'stevearc/oil.nvim'},
   {'tpope/vim-eunuch'},
   {'tpope/vim-fugitive'},
   {'tpope/vim-projectionist'},

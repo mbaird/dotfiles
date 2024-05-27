@@ -195,10 +195,6 @@ cmp.setup({
   })
 })
 
--- oil.nvim
-require("oil").setup()
-vim.keymap.set('n', '-', '<cmd>Oil<cr>')
-
 -- copilot.vim
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("<return>")', {
   expr = true,

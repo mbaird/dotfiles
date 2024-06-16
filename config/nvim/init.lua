@@ -15,6 +15,7 @@ vim.o.tabstop = 2             -- Number of spaces per tab
 vim.o.textwidth = 100         -- Reasonable wrap width
 vim.o.ttimeoutlen = 10        -- Time to wait for keycode sequences
 vim.o.scrolloff = 3           -- Keep lines of context when scrolling
+vim.o.mouse = ""              -- Disable mouse
 
 vim.o.statusline = table.concat({
   ' %f',        -- Filepath

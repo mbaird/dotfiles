@@ -9,7 +9,7 @@ require('paq') {
   {'junegunn/fzf.vim'},
   {'mbaird/monochrome.nvim'},
   {'neovim/nvim-lspconfig'},
-  {'nvim-treesitter/nvim-treesitter'},
+  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   {'ojroques/nvim-lspfuzzy'},
   {'savq/paq-nvim'},
   {'tpope/vim-eunuch'},

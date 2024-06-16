@@ -21,12 +21,6 @@ Install the dotfiles:
 env RCRC=$HOME/.dotfiles/rcrc rcup
 ```
 
-Regenerate iTerm2 theme:
-
-```lua
-local M = require 'monochrome.templates.init'; M.render('docs/monochrome.itermcolors')
-```
-
 Install Language Servers:
 
 ```bash

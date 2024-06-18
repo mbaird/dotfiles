@@ -56,6 +56,8 @@ source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting
 # Prevent overwriting files with `>` operator
 setopt noclobber
 
+export FZF_DEFAULT_OPTS="--color=bg+:#131313,bg:#131313,border:#9a9a9a,spinner:#c1c1c1,hl:#8abae1,fg:#9a9a9a,header:#fc6a5d,info:#ffffff,pointer:#fc6a5d,marker:#ffffff,fg+:#ffffff,prompt:#c1c1c1,hl+:#8abae1"
+
 # Enable 1Password SSH agent
 #
 # Only set SSH_AUTH_SOCK for local sessions (SSH_TTY is unset); if SSH_TTY is set, assume that it's

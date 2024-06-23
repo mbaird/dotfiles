@@ -68,6 +68,8 @@ config.colors = {
   cursor_bg = "#efbf38",
   cursor_border = "#131313",
   cursor_fg = "#08080a",
+  selection_fg = "#131313",
+  selection_bg = "#ffffff",
   foreground = "#c1c1c1",
   background = "#131313",
 }

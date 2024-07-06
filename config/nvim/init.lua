@@ -120,6 +120,8 @@ local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.solargraph.setup({ capabilities = capabilities })
+lsp.standardrb.setup({ capabilities = capabilities })
+lsp.gopls.setup({ capabilities = capabilities })
 lsp.tsserver.setup({ capabilities = capabilities })
 lsp.eslint.setup({
   on_attach = function(client, bufnr)

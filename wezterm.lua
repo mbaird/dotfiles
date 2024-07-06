@@ -33,6 +33,7 @@ config.window_padding = {
   top = '0.5cell',
   bottom = '0cell',
 }
+config.quit_when_all_windows_are_closed = false
 
 -- Tabs
 config.tab_bar_at_bottom = true

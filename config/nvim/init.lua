@@ -87,11 +87,9 @@ vim.g.splitjoin_ruby_do_block_split = 0
 vim.g.splitjoin_ruby_options_as_arguments = 1
 
 -- vim-test
-vim.g['test#strategy'] = 'basic'
 vim.keymap.set('n', '<leader>t', '<cmd>w <bar> TestNearest<return>')
 vim.keymap.set('n', '<leader>T', '<cmd>w <bar> TestFile<return>')
 vim.keymap.set('n', '<leader>l', '<cmd>w <bar> TestLast<return>')
-vim.keymap.set('n', '<leader>m', '<cmd>w <bar> Make<return>')
 
 -- nvim-treesitter
 require('nvim-treesitter.configs').setup({
@@ -133,7 +131,6 @@ vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
-vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action)
 vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
 end)

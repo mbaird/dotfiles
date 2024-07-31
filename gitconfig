@@ -21,6 +21,7 @@
   ra = rebase --abort
   cpc = cherry-pick --continue
   cpa = cherry-pick --abort
+  trust = "!mkdir -p .git/safe"
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore

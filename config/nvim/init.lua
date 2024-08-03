@@ -38,6 +38,11 @@ vim.keymap.set('n', '<esc><esc>', '<cmd>write<return>')
 vim.keymap.set('n', '<leader>d', '<cmd>bdelete<return>', { silent = true })
 vim.keymap.set('n', '<leader>D', '<cmd>bdelete!<return>', { silent = true })
 
+-- Searching
+vim.keymap.set('n', '<leader>ff', [[:Rg ]])
+vim.keymap.set('n', '<leader>fw', [[:Rg \<<C-r><C-w>\>]])
+vim.keymap.set('n', '<leader>fs', [[:%s/\<<C-r><C-w>\>//<Left>]])
+
 -- Exit (non-fzf) Terminal mode with <esc>
 vim.keymap.set(
   't',

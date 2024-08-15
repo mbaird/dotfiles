@@ -38,6 +38,7 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
 export FZF_CTRL_T_COMMAND="rg --files"
+export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
 export EDITOR=nvim
 export VISUAL=$EDITOR
 export PAGER=less

@@ -81,7 +81,7 @@ vim.g.ruby_path = vim.fn.expand('~/.rbenv/shims')
 -- fzf.vim
 vim.keymap.set('n', 'ff', '<cmd>Files<return>')
 vim.keymap.set('n', 'fb', '<cmd>Buffers<return>')
-vim.fn.setenv('FZF_DEFAULT_COMMAND', 'rg --files --no-messages')
+vim.fn.setenv('FZF_DEFAULT_COMMAND', 'rg --files --hidden --no-messages')
 vim.g.fzf_preview_window = ''
 
 -- splitjoin.vim

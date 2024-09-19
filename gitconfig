@@ -22,6 +22,7 @@
   cpc = cherry-pick --continue
   cpa = cherry-pick --abort
   trust = "!mkdir -p .git/safe"
+  spec = !git diff origin/$(git origin-head) --name-only --diff-filter=d | rg spec
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore

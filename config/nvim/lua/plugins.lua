@@ -1,4 +1,5 @@
 require('paq') {
+  {'rktjmp/lush.nvim'},
   {'AndrewRadev/splitjoin.vim'},
   {'JoosepAlviste/nvim-ts-context-commentstring'},
   {'hrsh7th/cmp-buffer'},

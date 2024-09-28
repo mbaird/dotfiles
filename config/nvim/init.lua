@@ -2,7 +2,12 @@ vim.g.mapleader = ' '
 
 require('plugins')
 
-vim.cmd('colors monochrome')
+vim.opt.runtimepath:append("/Users/michael/Developer/nvim-colorscheme")
+
+vim.o.background = vim.env.OS_THEME or 'light'
+
+-- vim.cmd('colors monochrome')
+vim.cmd('colorscheme nvim-colorscheme')
 
 vim.o.expandtab = true        -- Convert tabs to spaces
 vim.o.showcmd = false         -- Disable showing keystrokes below statusline
@@ -123,7 +128,7 @@ local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.solargraph.setup({ capabilities = capabilities })
-lsp.standardrb.setup({ capabilities = capabilities })
+-- lsp.standardrb.setup({ capabilities = capabilities })
 lsp.gopls.setup({ capabilities = capabilities })
 lsp.ts_ls.setup({ capabilities = capabilities })
 lsp.eslint.setup({

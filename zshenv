@@ -35,7 +35,6 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 export PAGER=less
 export LESS='-F -i -R -S -w -X -z-4'
-export RCRC=~/.rcrc
 export RUBYOPT='-W:deprecated'
 
 export -U PATH

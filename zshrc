@@ -16,11 +16,6 @@ RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh"
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
 
-fpath=(
-  $HOMEBREW_PREFIX/share/zsh/site-functions
-  $fpath
-)
-
 autoload -Uz compinit
 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then

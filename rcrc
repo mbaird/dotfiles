@@ -1,2 +1,1 @@
-EXCLUDES="*.md docs"
-DOTFILES_DIRS="$HOME/.dotfiles"
+EXCLUDES="*.md"

@@ -1,0 +1,9 @@
+[tools]
+go = "latest"
+node = "22"
+python = "3.13"
+ruby = "latest"
+usage = "latest"
+
+[env]
+MISE_DEFAULT_CONFIG_FILENAME = '.mise.local.toml'

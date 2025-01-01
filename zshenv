@@ -29,7 +29,6 @@ export GOPATH="${HOME}/.go"
 PATH="${GOPATH}/bin:${PATH}"
 
 # mkdir .git/safe for trusted repositories
-PATH=".git/safe/../../node_modules/.bin:${PATH}"
 PATH=".git/safe/../../bin:${PATH}"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"

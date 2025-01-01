@@ -13,8 +13,17 @@ setopt prompt_subst
 PROMPT="${remote}%{%}%~%{%f%} %F{white}❯%f "
 RPROMPT='%{%F{242}%}${vcs_info_msg_0_}%{%f%}'
 
+setopt hist_ignore_all_dups inc_append_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Prevent overwriting files with `>` operator
+setopt noclobber
+
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh"
 source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
+
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 autoload -Uz compinit
 
@@ -38,16 +47,6 @@ bindkey "^E" end-of-line
 bindkey '^b' backward-word
 bindkey '^w' forward-word
 bindkey '^[[3~' delete-char
-
-setopt hist_ignore_all_dups inc_append_history
-HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
-
-source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-# Prevent overwriting files with `>` operator
-setopt noclobber
 
 export FZF_DEFAULT_OPTS="--color=bg+:#131313,bg:#131313,border:#9a9a9a,spinner:#c1c1c1,hl:#8abae1,fg:#9a9a9a,header:#fc6a5d,info:#ffffff,pointer:#fc6a5d,marker:#ffffff,fg+:#ffffff,prompt:#c1c1c1,hl+:#8abae1"
 

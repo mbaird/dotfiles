@@ -66,11 +66,7 @@ if [ -z "$SSH_TTY" ]; then
   export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 fi
 
-alias l="ls -Alhp"
-alias mkdir="mkdir -p"
 alias dev="cd ~/Developer"
-alias web="cd ~/Developer/web"
 alias t="$EDITOR ~/.notes/today.md"
 alias vim="nvim"
 alias dot="cd ~/.dotfiles"
-alias batt="pmset -g batt | rg -o --pcre2 '([0-9]+\%).*' | cut -f3 -d' '"

@@ -26,12 +26,7 @@ source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
 source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 autoload -Uz compinit
-
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-  compinit;
-else
-  compinit -C;
-fi;
+compinit -C;
 
 g() {
   if [[ $# -gt 0 ]]; then

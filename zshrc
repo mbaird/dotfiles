@@ -84,3 +84,5 @@ alias dev="cd ~/Developer"
 alias t="$EDITOR ~/.notes/today.md"
 alias vim="nvim"
 alias dot="cd ~/.dotfiles"
+
+eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"

@@ -46,7 +46,6 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey '^b' backward-word
 bindkey '^w' forward-word
-bindkey '^[[3~' delete-char
 
 export FZF_DEFAULT_OPTS="--color=bg+:#131313,bg:#131313,border:#9a9a9a,spinner:#c1c1c1,hl:#8abae1,fg:#9a9a9a,header:#fc6a5d,info:#ffffff,pointer:#fc6a5d,marker:#ffffff,fg+:#ffffff,prompt:#c1c1c1,hl+:#8abae1"
 

@@ -32,10 +32,6 @@ PATH="${GOPATH}/bin:${PATH}"
 PATH=".git/safe/../../node_modules/.bin:${PATH}"
 PATH=".git/safe/../../bin:${PATH}"
 
-# android sdk
-PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
-export ANDROID_HOME="${HOME}/Library/Android/sdk"
-
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
 export FZF_CTRL_T_COMMAND="rg --files"
 export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc

@@ -21,9 +21,6 @@ PATH="${HOME}/.yarn/bin:${PATH}"
 # python via pyenv
 PATH="${HOME}/.pyenv/shims:${PATH}"
 
-# cargo binaries
-PATH="${HOME}/.cargo/bin:${PATH}"
-
 # go
 export GOPATH="${HOME}/.go"
 PATH="${GOPATH}/bin:${PATH}"

@@ -1,3 +1,31 @@
+BREW_PREFIX="/opt/homebrew"
+export HOMEBREW_PREFIX="${BREW_PREFIX}";
+export HOMEBREW_CELLAR="${BREW_PREFIX}/Cellar";
+export HOMEBREW_REPOSITORY="${BREW_PREFIX}/Homebrew";
+export HOMEBREW_NO_ENV_HINTS=1
+PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:${PATH}";
+
+# dotfile binaries
+PATH="${HOME}/.bin:${PATH}"
+
+# go
+export GOPATH="${HOME}/.go"
+PATH="${GOPATH}/bin:${PATH}"
+
+# mkdir .git/safe for trusted repositories
+PATH=".git/safe/../../bin:${PATH}"
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
+export FZF_CTRL_T_COMMAND="rg --files"
+export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
+export EDITOR=nvim
+export VISUAL=$EDITOR
+export PAGER=less
+export LESS='-F -i -R -S -w -X -z-4'
+export RUBYOPT='-W:deprecated'
+
+export -U PATH
+
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' unstagedstr "*"

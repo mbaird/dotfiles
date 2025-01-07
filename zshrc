@@ -1,9 +1,9 @@
-BREW_PREFIX="/opt/homebrew"
-export HOMEBREW_PREFIX="${BREW_PREFIX}";
-export HOMEBREW_CELLAR="${BREW_PREFIX}/Cellar";
-export HOMEBREW_REPOSITORY="${BREW_PREFIX}/Homebrew";
+# homebrew
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="${HOMEBREW_PREFIX}/Cellar";
+export HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew";
 export HOMEBREW_NO_ENV_HINTS=1
-PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:${PATH}";
+PATH="${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin:${PATH}";
 
 # dotfile binaries
 PATH="${HOME}/.bin:${PATH}"
@@ -12,7 +12,10 @@ PATH="${HOME}/.bin:${PATH}"
 export GOPATH="${HOME}/.go"
 PATH="${GOPATH}/bin:${PATH}"
 
-# mkdir .git/safe for trusted repositories
+# mise
+eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
+
+# `git trust`
 PATH=".git/safe/../../bin:${PATH}"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
@@ -84,5 +87,3 @@ alias dev="cd ~/Developer"
 alias t="$EDITOR ~/.notes/today.md"
 alias vim="nvim"
 alias dot="cd ~/.dotfiles"
-
-eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"

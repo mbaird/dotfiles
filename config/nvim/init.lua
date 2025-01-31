@@ -76,8 +76,6 @@ vim.diagnostic.config({
   },
 })
 
-vim.g.ruby_path = vim.fn.expand('~/.rbenv/shims')
-
 -- fzf.vim
 vim.keymap.set('n', 'ff', '<cmd>Files<return>')
 vim.keymap.set('n', 'fb', '<cmd>Buffers<return>')

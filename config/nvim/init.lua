@@ -116,6 +116,11 @@ require('nvim-treesitter.configs').setup({
 require('ts_context_commentstring').setup { }
 vim.g.skip_ts_context_commentstring_module = true
 
+-- leap.nvim
+require('leap')
+vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
+vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
+
 -- lspconfig
 local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()

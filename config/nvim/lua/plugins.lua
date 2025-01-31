@@ -1,6 +1,7 @@
 require('paq') {
   {'AndrewRadev/splitjoin.vim'},
   {'JoosepAlviste/nvim-ts-context-commentstring'},
+  {'ggandor/leap.nvim'},
   {'hrsh7th/cmp-buffer'},
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/nvim-cmp'},

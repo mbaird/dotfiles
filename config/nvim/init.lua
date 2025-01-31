@@ -38,10 +38,12 @@ vim.keymap.set('n', '<esc><esc>', '<cmd>write<return>')
 vim.keymap.set('n', '<leader>d', '<cmd>bdelete<return>', { silent = true })
 vim.keymap.set('n', '<leader>D', '<cmd>bdelete!<return>', { silent = true })
 
--- Searching
+-- Searching and replacing
 vim.keymap.set('n', '<leader>ff', [[:Rg ]])
 vim.keymap.set('n', '<leader>fw', [[:Rg \<<C-r><C-w>\>]])
-vim.keymap.set('n', '<leader>fs', [[:%s/\<<C-r><C-w>\>//<Left>]])
+vim.keymap.set('v', '<leader>fw', [[y:Rg <C-r>"]])
+vim.keymap.set('n', '<leader>sw', [[:%s/\<<C-r><C-w>\>//c<Left><Left>]])
+vim.keymap.set('v', '<leader>sw', [[y:%s/<C-r>"//c<Left><Left>]])
 
 -- Exit (non-fzf) Terminal mode with <esc>
 vim.keymap.set(
@@ -57,28 +59,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
  command = "silent! :%s/\\s\\+$//e"
 })
 
--- Reset cursor style on exit
-vim.api.nvim_create_autocmd('VimLeave', {
-  command = 'set guicursor=a:hor30',
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'javascript',
-  command = 'set filetype=javascriptreact',
-})
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = "rounded"
-  }
-)
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    border = "rounded"
-  }
-)
-
 vim.diagnostic.config({
   severity_sort = true,
   virtual_text = false,
@@ -90,7 +70,7 @@ vim.diagnostic.config({
 
 -- fzf.vim
 vim.keymap.set('n', 'ff', '<cmd>Files<return>')
-vim.keymap.set('n', 'fb', '<cmd>Buffers<return>')
+vim.keymap.set('n', 'fg', '<cmd>Buffers<return>')
 vim.fn.setenv('FZF_DEFAULT_COMMAND', 'rg --files --hidden --no-messages')
 vim.g.fzf_preview_window = ''
 
@@ -104,7 +84,7 @@ vim.g.splitjoin_ruby_options_as_arguments = 1
 vim.keymap.set('n', '<leader>t', '<cmd>w <bar> TestNearest<return>')
 vim.keymap.set('n', '<leader>T', '<cmd>w <bar> TestFile<return>')
 vim.keymap.set('n', '<leader>l', '<cmd>w <bar> TestLast<return>')
-vim.keymap.set('n', '<leader>s', '<cmd>w <bar> TestSuite<return>')
+vim.keymap.set('n', '<leader>S', '<cmd>w <bar> TestSuite<return>')
 
 -- nvim-treesitter
 require('nvim-treesitter.configs').setup({
@@ -124,7 +104,7 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
---  nvim-ts-context-commentstring
+-- nvim-ts-context-commentstring
 require('ts_context_commentstring').setup { }
 vim.g.skip_ts_context_commentstring_module = true
 
@@ -154,6 +134,14 @@ vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
 end)
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, { border = "rounded" }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, { border = "rounded" }
+)
 
 -- nvim-lspfuzzy
 require('lspfuzzy').setup {

@@ -11,6 +11,7 @@ require('paq') {
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   {'ojroques/nvim-lspfuzzy'},
   {'savq/paq-nvim'},
+  {'tpope/vim-endwise'},
   {'tpope/vim-eunuch'},
   {'tpope/vim-fugitive'},
   {'tpope/vim-projectionist'},

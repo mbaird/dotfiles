@@ -122,7 +122,7 @@ vim.g.skip_ts_context_commentstring_module = true
 local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lsp.solargraph.setup({ capabilities = capabilities })
+lsp.ruby_lsp.setup({ capabilities = capabilities })
 lsp.standardrb.setup({ capabilities = capabilities })
 lsp.gopls.setup({ capabilities = capabilities })
 lsp.ts_ls.setup({ capabilities = capabilities })
@@ -194,7 +194,6 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-  }, {
     { name = 'buffer' },
   })
 })

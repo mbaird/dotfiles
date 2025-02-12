@@ -8,16 +8,6 @@ config.font_size = 15.0
 config.line_height = 1.22
 config.cell_width = 0.94
 config.font = wezterm.font('SF Mono')
-config.font_rules = {
-  {
-    intensity = 'Normal',
-    font = wezterm.font('SF Mono', { italic = false })
-  },
-  {
-    intensity = 'Bold',
-    font = wezterm.font('SF Mono', { weight = 'Regular' })
-  }
-}
 
 -- Cursor
 config.default_cursor_style = "SteadyUnderline"
@@ -39,7 +29,6 @@ config.quit_when_all_windows_are_closed = false
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
-config.hide_tab_bar_if_only_one_tab = true
 config.switch_to_last_active_tab_when_closing_tab = true
 
 -- Theme

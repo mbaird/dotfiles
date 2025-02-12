@@ -1,7 +1,11 @@
 [tools]
+bun = "latest"
 "gem:ruby-lsp" = "latest"
 go = "latest"
 node = "22"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
 python = "3.13"
 ruby = "latest"
 usage = "latest"

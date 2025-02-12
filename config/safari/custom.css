@@ -1,0 +1,37 @@
+/* LinkedIn */
+main[aria-label="Main Feed"],
+aside[aria-label="LinkedIn News"] {
+  display: none !important;
+}
+
+/* Reddit */
+#popular-posts,
+#explore-communities,
+#all-posts,
+#home-posts,
+#left-sidebar hr,
+#multireddits_section,
+[aria-controls="multireddits_section"],
+#RECENT,
+[aria-controls="RECENT"],
+#RESOURCES,
+[aria-controls="RESOURCES"],
+#reddit-recent-searches-partial-container,
+#reddit-trending-searches-partial-container,
+[data-testid="search-dropdown-results-container"] div:has(svg),
+.left-nav-create-community-button,
+[aria-label="Add community to favorites"],
+shreddit-feed[reload-url*="home-feed"],
+shreddit-feed[reload-url*="popular-feed"],
+shreddit-feed[reload-url*="all-feed"],
+shreddit-ad-post,
+shreddit-comments-page-ad,
+shreddit-gallery-carousel,
+shreddit-sidebar-ad {
+  display: none !important;
+}
+
+/* Feedly */
+div.TopHeaderBar button {
+  display: none !important;
+}

@@ -2,7 +2,7 @@
 bun = "latest"
 "gem:ruby-lsp" = "latest"
 go = "latest"
-node = "22"
+node = "lts"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:vscode-langservers-extracted" = "latest"

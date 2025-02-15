@@ -26,7 +26,6 @@
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore
-  pager = less -x1,3
 [fetch]
   prune = true
 [rebase]

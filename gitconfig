@@ -14,6 +14,7 @@
   d = diff
   dc = diff --cached
   lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
+  lp = log -p
   origin-head = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
   up = !git pull origin $(git origin-head) --rebase
   amend = commit --amend

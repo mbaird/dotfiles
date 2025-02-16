@@ -10,6 +10,7 @@
   aa = add --all
   ap = add -p
   ci = commit -v
+  cf = commit --fixup
   co = checkout
   d = diff
   dc = diff --cached

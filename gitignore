@@ -1,8 +1,4 @@
 .DS_Store
-.bundle
-.env
-.gems
-todo.md
-.solargraph.yml
-.projections.json
 .mise.local.toml
+.projections.json
+todo.md

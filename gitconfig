@@ -1,40 +1,52 @@
 [user]
   name  = Michael Baird
   email = mbaird@users.noreply.github.com
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIM92O2lB7hL8Ip0MPZhHxZFLzjQ3TJ65nzakWnte+uo
-[push]
-  default = current
-[pull]
-  rebase = true
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILcxuoRBUqmGVpKUYLs4F1Y7JhvrcWQLoL0fMA8oTymm
 [alias]
   aa = add --all
   ap = add -p
-  ci = commit -v
+  ca = commit --amend
   cf = commit --fixup
   co = checkout
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
   d = diff
   dc = diff --cached
   lg = log --color --pretty=format:'%C(magenta)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
   lp = log -p
   origin-head = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
-  up = !git pull origin $(git origin-head) --rebase
-  amend = commit --amend
-  rc = rebase --continue
   ra = rebase --abort
-  cpc = cherry-pick --continue
-  cpa = cherry-pick --abort
+  rc = rebase --continue
   trust = "!mkdir -p .git/safe"
+  up = !git pull origin $(git origin-head)
+[branch]
+  sort = -committerdate
+[commit]
+  gpgsign = true
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore
+[diff]
+  algorithm = histogram
+  mnemonicPrefix = true
+  renames = true
 [fetch]
   prune = true
-[rebase]
-  autosquash = true
-  autostash = true
-[commit]
-  gpgsign = true
+  pruneTags = true
+  all = true
 [gpg]
   format = ssh
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[push]
+  followTags = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[tag]
+  sort = version:refname

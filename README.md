@@ -2,7 +2,7 @@
 
 1. Install Homebrew packages
     ```shell
-    brew install rcm
+    brew bundle
     ```
 
 2. Install dotfiles

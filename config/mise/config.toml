@@ -2,7 +2,7 @@
 bun = "latest"
 go = "latest"
 node = "lts"
-python = "3.13"
+python = "latest"
 ruby = "latest"
 usage = "latest"
 

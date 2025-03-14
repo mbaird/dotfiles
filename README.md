@@ -1,12 +1,17 @@
 # dotfiles
 
-## Install
+1. Install Homebrew packages
+    ```shell
+    brew install rcm
+    ```
 
-```
-brew install rcm
-git clone git@github.com:mbaird/dotfiles.git ~/.dotfiles
-RCRC=$HOME/.dotfiles/rcrc rcup
-```
+2. Install dotfiles
+    ```shell
+    RCRC=$HOME/.dotfiles/rcrc rcup
+    ```
 
-## Resources
-* [How to profile your zsh startup time](https://esham.io/2018/02/zsh-profiling)
+3. Change shell
+    ```shell
+    echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+    chsh -s /opt/homebrew/bin/fish
+    ```

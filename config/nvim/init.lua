@@ -1,8 +1,27 @@
+require('paq') {
+  'AndrewRadev/splitjoin.vim',
+  'JoosepAlviste/nvim-ts-context-commentstring',
+  'ggandor/leap.nvim',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/nvim-cmp',
+  'junegunn/fzf',
+  'junegunn/fzf.vim',
+  'neovim/nvim-lspconfig',
+  'ojroques/nvim-lspfuzzy',
+  'savq/paq-nvim',
+  'tpope/vim-eunuch',
+  'tpope/vim-fugitive',
+  'tpope/vim-projectionist',
+  'tpope/vim-repeat',
+  'tpope/vim-rhubarb',
+  'tpope/vim-surround',
+  'tpope/vim-unimpaired',
+  'vim-test/vim-test',
+  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+}
+
 vim.g.mapleader = ' '
-
-require('plugins')
-
-vim.cmd('colors monochrome')
 
 vim.o.expandtab = true        -- Convert tabs to spaces
 vim.o.showcmd = false         -- Disable showing keystrokes below statusline
@@ -13,7 +32,7 @@ vim.o.shiftwidth = 2          -- Use 2 spaces for auto indent
 vim.o.shortmess = 'atIF'      -- Disable intro message, truncate shortmessages
 vim.o.tabstop = 2             -- Number of spaces per tab
 vim.o.scrolloff = 3           -- Keep lines of context when scrolling
-vim.o.mouse = ""              -- Disable mouse
+vim.o.mouse = ''              -- Disable mouse
 
 vim.o.statusline = table.concat({
   ' %f',        -- Filepath
@@ -135,12 +154,12 @@ vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
 end)
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, { border = "rounded" }
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover, { border = 'rounded' }
 )
 
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, { border = "rounded" }
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, { border = 'rounded' }
 )
 
 -- nvim-lspfuzzy
@@ -154,7 +173,7 @@ vim.keymap.set('n', '<leader>fr', '<cmd>LspFuzzyLast<return>')
 local cmp = require('cmp')
 
 local has_words_before = function()
-  if vim.api.nvim_get_option_value("buftype", { buf = 0 }) == "prompt" then return false end
+  if vim.api.nvim_get_option_value('buftype', { buf = 0 }) == 'prompt' then return false end
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end

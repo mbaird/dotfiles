@@ -15,3 +15,9 @@
     echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
     chsh -s /opt/homebrew/bin/fish
     ```
+
+4. Install neovim plugins
+    ```shell
+    git clone --depth=1 https://github.com/savq/paq-nvim.git ~/.local/share/nvim/site/pack/paqs/start/paq-nvim
+    vim -c :PaqInstall
+    ```

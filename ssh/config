@@ -1,7 +1,0 @@
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  Compression yes
-
-Host primary secondary
-  ForwardAgent yes

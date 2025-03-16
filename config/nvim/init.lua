@@ -10,6 +10,7 @@ require('paq') {
   'neovim/nvim-lspconfig',
   'ojroques/nvim-lspfuzzy',
   'sQVe/sort.nvim',
+  'rktjmp/lush.nvim',
   'savq/paq-nvim',
   'tpope/vim-eunuch',
   'tpope/vim-fugitive',
@@ -45,6 +46,18 @@ vim.o.statusline = table.concat({
   '%2c,',       -- Column
   '%l/%L '      -- Line number / number of lines in buffer
 }, '')
+
+local function sync_colorscheme()
+  vim.o.background = vim.fn.readfile('/tmp/appearance')[1]
+  vim.cmd.colorscheme('custom')
+end
+
+sync_colorscheme()
+
+vim.api.nvim_create_autocmd('Signal', {
+  pattern = '*',
+  callback = sync_colorscheme
+})
 
 -- Switch to last viewed buffer
 vim.keymap.set('n', '<leader><leader>', '<c-^>')

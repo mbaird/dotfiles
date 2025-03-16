@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
+local theme = require("theme").init()
 local config = wezterm.config_builder()
 
 -- Text
@@ -28,42 +29,12 @@ config.tab_max_width = 25
 config.use_fancy_tab_bar = false
 
 -- Theme
-config.colors = {
-  ansi = {
-    '#131313',
-    '#fc6a5d',
-    '#8abae1',
-    '#dddddd',
-    '#ffffff',
-    '#dddddd',
-    '#dddddd',
-    '#ffffff',
-  },
-
-  brights = {
-    '#131313',
-    '#fc6a5d',
-    '#8abae1',
-    '#dddddd',
-    '#ffffff',
-    '#dddddd',
-    '#dddddd',
-    '#ffffff',
-  },
-
-  cursor_bg = "#efbf38",
-  cursor_border = "#131313",
-  cursor_fg = "#08080a",
-  selection_fg = "#131313",
-  selection_bg = "#ffffff",
-  foreground = "#c1c1c1",
-  background = "#131313",
-}
-
+config.color_scheme = theme.mode
 config.inactive_pane_hsb = {
-  saturation = 1.0,
-  brightness = 0.6,
+  brightness = 0.9,
 }
+
+wezterm.on('toggle-theme-mode', theme.toggle)
 
 -- Shortcuts
 config.keys = {
@@ -74,6 +45,11 @@ config.keys = {
       cwd = os.getenv("WEZTERM_CONFIG_DIR"),
       args = { os.getenv("SHELL"), "-c", "$EDITOR $WEZTERM_CONFIG_FILE" },
     }),
+  },
+  {
+    key = 'm',
+    mods = 'CMD',
+    action = wezterm.action.EmitEvent('toggle-theme-mode'),
   },
   {
     key = 'Enter',

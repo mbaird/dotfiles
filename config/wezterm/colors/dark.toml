@@ -1,0 +1,32 @@
+[colors]
+  ansi = [
+    'hsl:216 21 23',
+    'hsl:12 71 66',
+    'hsl:173 23 58',
+    'hsl:34 66 71',
+    'hsl:214 28 46',
+    'hsl:263 66 80',
+    'hsl:309 57 71',
+    'hsl:240 9 90',
+  ]
+
+  brights = [
+    'hsl:240 9 90',
+    'hsl:12 71 66',
+    'hsl:173 23 58',
+    'hsl:34 66 71',
+    'hsl:214 28 46',
+    'hsl:263 66 80',
+    'hsl:309 57 71',
+    'hsl:220 21 65',
+  ]
+
+  cursor_bg = 'hsl:240 9 90'
+  cursor_border = 'hsl:240 9 90'
+  cursor_fg = 'hsl:230 22 10'
+
+  selection_fg = 'hsl:230 22 10'
+  selection_bg = 'hsl:240 9 90'
+
+  foreground = 'hsl:240 5 76'
+  background = 'hsl:230 22 10'

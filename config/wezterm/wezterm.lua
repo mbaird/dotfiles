@@ -1,7 +1,6 @@
 local wezterm = require 'wezterm'
-local config = wezterm.config_builder()
-local hostname = wezterm.hostname()
 local act = wezterm.action
+local config = wezterm.config_builder()
 
 -- Text
 config.font_size = 15.0
@@ -14,22 +13,19 @@ config.default_cursor_style = "SteadyUnderline"
 config.cursor_thickness = 2.0
 
 -- Window
-config.initial_rows = 30
-config.initial_cols = 110
+config.quit_when_all_windows_are_closed = false
 config.use_resize_increments = true
+config.window_decorations = "TITLE|RESIZE"
 config.window_padding = {
-  left = '1cell',
-  right = '1cell',
-  top = '0.5cell',
   bottom = '0cell',
 }
-config.quit_when_all_windows_are_closed = false
 
 -- Tabs
-config.tab_bar_at_bottom = true
-config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.switch_to_last_active_tab_when_closing_tab = true
+config.tab_bar_at_bottom = true
+config.tab_max_width = 25
+config.use_fancy_tab_bar = false
 
 -- Theme
 config.colors = {

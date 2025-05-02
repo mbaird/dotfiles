@@ -4,3 +4,6 @@ go = "latest"
 node = "lts"
 python = "latest"
 ruby = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]

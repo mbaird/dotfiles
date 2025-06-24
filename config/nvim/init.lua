@@ -33,6 +33,7 @@ vim.o.shortmess = 'atIF'      -- Disable intro message, truncate shortmessages
 vim.o.tabstop = 2             -- Number of spaces per tab
 vim.o.scrolloff = 3           -- Keep lines of context when scrolling
 vim.o.mouse = ''              -- Disable mouse
+vim.o.list = true             -- Show whitespace
 
 vim.o.statusline = table.concat({
   ' %f',        -- Filepath

@@ -9,6 +9,7 @@ require('paq') {
   'junegunn/fzf.vim',
   'neovim/nvim-lspconfig',
   'ojroques/nvim-lspfuzzy',
+  'sQVe/sort.nvim',
   'savq/paq-nvim',
   'tpope/vim-eunuch',
   'tpope/vim-fugitive',
@@ -126,6 +127,22 @@ require('nvim-treesitter.configs').setup({
 -- nvim-ts-context-commentstring
 require('ts_context_commentstring').setup { }
 vim.g.skip_ts_context_commentstring_module = true
+
+-- sort.nvim
+require('sort').setup({
+  natural_sort = true,
+  mappings = {
+    operator = 'go',
+    textobject = {
+      inner = 'io',
+      around = 'ao',
+    },
+    motion = {
+      next_delimiter = ']o',
+      prev_delimiter = '[o',
+    },
+  },
+})
 
 -- leap.nvim
 require('leap')

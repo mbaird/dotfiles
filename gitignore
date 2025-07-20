@@ -1,5 +1,6 @@
 .DS_Store
 .projections.json
 .rspec-local
+.venv
 mise.toml
 todo.md

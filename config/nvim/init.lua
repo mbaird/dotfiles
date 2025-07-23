@@ -108,7 +108,7 @@ vim.keymap.set('n', '<leader>S', '<cmd>w <bar> TestSuite<return>')
 
 -- nvim-treesitter
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'lua', 'vim', 'json', 'yaml', 'vimdoc' },
+  ensure_installed = { 'lua', 'vim', 'json', 'yaml', 'vimdoc', 'query' },
   auto_install = true,
   indent = {
     enable = true,

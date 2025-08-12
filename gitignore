@@ -2,5 +2,6 @@
 .projections.json
 .rspec-local
 .venv
+.local
 mise.toml
 todo.md

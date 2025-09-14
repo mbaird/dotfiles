@@ -11,6 +11,7 @@ config.font = wezterm.font('SF Mono')
 -- Cursor
 config.default_cursor_style = "SteadyUnderline"
 config.cursor_thickness = 2.0
+config.cursor_blink_rate = 0
 
 -- Window
 config.quit_when_all_windows_are_closed = false

@@ -11,6 +11,7 @@ require('paq') {
   'ojroques/nvim-lspfuzzy',
   'sQVe/sort.nvim',
   'savq/paq-nvim',
+  'shortcuts/no-neck-pain.nvim',
   'tpope/vim-eunuch',
   'tpope/vim-fugitive',
   'tpope/vim-projectionist',
@@ -88,6 +89,16 @@ vim.diagnostic.config({
     border = 'rounded',
   },
 })
+
+-- no-neck-pain.nvim
+require("no-neck-pain").setup({
+  buffers = {
+    wo = {
+      fillchars = "eob: ",
+    },
+  },
+})
+vim.keymap.set('n', '<leader>n', '<cmd>NoNeckPain<return>')
 
 -- fzf.vim
 vim.keymap.set('n', 'ff', '<cmd>Files<return>')

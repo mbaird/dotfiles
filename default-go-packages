@@ -1,0 +1,2 @@
+golang.org/x/tools/gopls@latest
+github.com/nametake/golangci-lint-langserver@latest

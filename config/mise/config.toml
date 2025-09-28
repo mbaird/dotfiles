@@ -7,3 +7,6 @@ uv = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "ruby", "python", "terraform", "yarn"]
+
+[env]
+GOPATH = "/Users/michael/.go"

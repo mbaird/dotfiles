@@ -20,6 +20,11 @@ set -gx MISE_DATA_DIR "~/.mise"
 # `git trust`
 set PATH ./.git/safe/../../bin $PATH
 
+# 1password ssh
+if test -z "$SSH_TTY"
+  set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
+end
+
 set -gx FZF_DEFAULT_COMMAND fd --hidden --type file --color never --exclude .git
 set -gx EDITOR nvim
 set -gx VISUAL $EDITOR

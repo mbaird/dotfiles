@@ -23,6 +23,7 @@
   sort = -committerdate
 [commit]
   gpgsign = true
+  template = ~/.gitmessage
 [core]
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore

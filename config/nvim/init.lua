@@ -164,6 +164,7 @@ lsp.eslint.setup({
     client.server_capabilities.documentFormattingProvider = true
   end
 })
+lsp.intelephense.setup({})
 
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next)

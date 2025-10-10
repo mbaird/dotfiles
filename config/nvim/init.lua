@@ -153,8 +153,10 @@ vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
 local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lsp.ruby_lsp.setup({ capabilities = capabilities })
-lsp.standardrb.setup({ capabilities = capabilities })
+lsp.ruby_lsp.setup({
+  capabilities = capabilities,
+  init_options = { formatter = 'standard', linters = { 'standard' } },
+})
 lsp.gopls.setup({ capabilities = capabilities })
 lsp.ts_ls.setup({ capabilities = capabilities })
 lsp.eslint.setup({

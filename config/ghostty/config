@@ -1,0 +1,15 @@
+shell-integration-features = no-cursor
+theme = light:Rose Pine Dawn,dark:Rose Pine
+font-family = SF Mono
+font-style-bold = Semibold
+font-size = 15
+adjust-cell-height = 22%
+adjust-cell-width = -6%
+cursor-style = underline
+cursor-style-blink = false
+adjust-cursor-thickness = 2
+window-padding-x = 6
+window-padding-y = 4
+window-padding-balance = true
+macos-option-as-alt = left
+macos-titlebar-proxy-icon = hidden

@@ -27,6 +27,7 @@ config.switch_to_last_active_tab_when_closing_tab = true
 config.tab_bar_at_bottom = true
 config.tab_max_width = 25
 config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 
 -- Theme
 config.colors = {

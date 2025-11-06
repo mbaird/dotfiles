@@ -12,6 +12,7 @@ end
 
 # homebrew
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 set -x HOMEBREW_NO_ENV_HINTS 1
 
 # mise
@@ -19,6 +20,9 @@ set -x MISE_DATA_DIR $HOME/.mise
 
 # `git trust`
 set -x PATH ./.git/safe/../../bin $PATH
+
+# scripts
+set -x PATH $HOME/.bin $PATH
 
 # 1password ssh
 if test -z "$SSH_TTY"

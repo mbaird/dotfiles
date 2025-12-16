@@ -2,3 +2,4 @@ yarn
 typescript
 typescript-language-server
 vscode-langservers-extracted
+@herb-tools/language-server

@@ -8,6 +8,8 @@ if status is-interactive
   set __fish_git_prompt_char_untrackedfiles ""
   set __fish_git_prompt_char_stagedstate ""
   set __fish_git_prompt_char_conflictedstate ""
+
+  fish_config theme choose custom
 end
 
 # homebrew

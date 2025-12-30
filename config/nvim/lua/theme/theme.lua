@@ -122,7 +122,7 @@ local theme = lush(function(injected_functions)
     -- llama.vim
     llama_hl_hint { fg = palette.muted, italic = true },
     llama_hl_info { fg = palette.info },
-}
+  }
 end)
 
 return theme

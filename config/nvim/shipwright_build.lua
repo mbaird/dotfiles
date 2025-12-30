@@ -140,3 +140,35 @@ palette = 15=$palette_15
 ]]
   return helpers.split_newlines(helpers.apply_template(template, g))
 end, { overwrite, vim.fn.expand("~/.dotfiles/config/ghostty/themes/light") })
+
+local fzf = run({ colorscheme = colorscheme, palette = palette }, function(theme)
+  local c = theme.colorscheme
+  local p = theme.palette
+
+  local function hex(color)
+    return tostring(color)
+  end
+
+  return {
+    fg = hex(p.text),
+    bg = hex(p.base),
+    hl = hex(p.gold),
+    fg_plus = hex(p.text),
+    bg_plus = hex(p.highlight_low),
+    hl_plus = hex(p.gold),
+    info = hex(p.muted),
+    prompt = hex(p.foam),
+    pointer = hex(p.foam),
+    marker = hex(p.rose),
+    spinner = hex(p.iris),
+    header = hex(p.muted),
+    border = hex(p.muted),
+  }
+end)
+
+run(fzf, function(f)
+  local template =
+    [[set -gx FZF_DEFAULT_OPTS --color=fg:$fg,bg:$bg,hl:$hl,fg+:$fg_plus,bg+:$bg_plus,hl+:$hl_plus,info:$info,prompt:$prompt,pointer:$pointer,marker:$marker,spinner:$spinner,header:$header,border:$border
+]]
+  return helpers.split_newlines(helpers.apply_template(template, f))
+end, { overwrite, vim.fn.expand("~/.dotfiles/config/fish/conf.d/fzf_theme.fish") })

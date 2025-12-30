@@ -32,9 +32,6 @@ if test -z "$SSH_TTY"
   set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 end
 
-# fzf
-set -x FZF_DEFAULT_COMMAND fd --hidden --type file --color never --exclude .git
-
 set -x EDITOR nvim
 set -x VISUAL $EDITOR
 set -x LESS -F -i -R -S -w -X -z-4

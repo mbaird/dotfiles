@@ -1,0 +1,64 @@
+{
+  "plugins": {
+    "fzf-lua": {
+      "rev": "a899e3e33c6c26ffeda5739fb6e7157cfc21ad6f",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "llama.vim": {
+      "rev": "8e7d1d0a1b00529fc4601b24e134d214e67c44f6",
+      "src": "https://github.com/ggml-org/llama.vim"
+    },
+    "lush.nvim": {
+      "rev": "9c60ec2",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "shipwright.nvim": {
+      "rev": "e596ab4",
+      "src": "https://github.com/rktjmp/shipwright.nvim"
+    },
+    "splitjoin.vim": {
+      "rev": "9ce4fb4f0538cff02a57a393057b7ab371324483",
+      "src": "https://github.com/AndrewRadev/splitjoin.vim"
+    },
+    "vim-eunuch": {
+      "rev": "e86bb79",
+      "src": "https://github.com/tpope/vim-eunuch"
+    },
+    "vim-fugitive": {
+      "rev": "61b51c0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    },
+    "vim-projectionist": {
+      "rev": "5ff7bf7",
+      "src": "https://github.com/tpope/vim-projectionist"
+    },
+    "vim-rails": {
+      "rev": "b0a5c76",
+      "src": "https://github.com/tpope/vim-rails"
+    },
+    "vim-repeat": {
+      "rev": "6584602",
+      "src": "https://github.com/tpope/vim-repeat"
+    },
+    "vim-rhubarb": {
+      "rev": "5496d7c",
+      "src": "https://github.com/tpope/vim-rhubarb"
+    },
+    "vim-surround": {
+      "rev": "3d188ed",
+      "src": "https://github.com/tpope/vim-surround"
+    },
+    "vim-test": {
+      "rev": "aa619692ff48a3cf3e6bdb893765039488d4e5f3",
+      "src": "https://github.com/vim-test/vim-test"
+    },
+    "vim-unimpaired": {
+      "rev": "db65482",
+      "src": "https://github.com/tpope/vim-unimpaired"
+    }
+  }
+}

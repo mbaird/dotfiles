@@ -15,6 +15,9 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 set -x HOMEBREW_NO_ENV_HINTS 1
 
+# nvim
+fish_add_path $HOME/.local/share/bob/nvim-bin
+
 # mise
 set -x MISE_DATA_DIR $HOME/.mise
 

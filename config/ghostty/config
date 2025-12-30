@@ -1,5 +1,5 @@
 shell-integration-features = no-cursor
-theme = light:Rose Pine Dawn,dark:Rose Pine
+theme = light
 font-family = SF Mono
 font-style-bold = Semibold
 font-size = 15

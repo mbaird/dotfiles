@@ -1,0 +1,19 @@
+[colors]
+foreground    = "#49455E"
+background    = "#FCF8F3"
+cursor_fg     = "#FCF8F3"
+cursor_bg     = "#49455E"
+cursor_border = "#49455E"
+selection_fg  = "none"
+selection_bg  = "#E3DFDE"
+ansi = ["#F3EAE2", "#C63958", "#296B85", "#EA9E34", "#56949F", "#9B80C6", "#D7837E", "#49455E"]
+brights = ["#636076", "#C63958", "#296B85", "#EA9E34", "#56949F", "#9B80C6", "#D7837E", "#49455E"]
+[colors.tab_bar]
+background = "#FCF8F3"
+[colors.tab_bar.active_tab]
+bg_color = "#FCF8F3"
+fg_color = "#636076"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#FCF8F3"
+fg_color = "#898494"

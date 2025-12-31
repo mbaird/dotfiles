@@ -30,38 +30,7 @@ config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Theme
-config.colors = {
-  ansi = {
-    '#131313',
-    '#fc6a5d',
-    '#8abae1',
-    '#dddddd',
-    '#ffffff',
-    '#dddddd',
-    '#dddddd',
-    '#ffffff',
-  },
-
-  brights = {
-    '#131313',
-    '#fc6a5d',
-    '#8abae1',
-    '#dddddd',
-    '#ffffff',
-    '#dddddd',
-    '#dddddd',
-    '#ffffff',
-  },
-
-  cursor_bg = "#efbf38",
-  cursor_border = "#131313",
-  cursor_fg = "#08080a",
-  selection_fg = "#131313",
-  selection_bg = "#ffffff",
-  foreground = "#c1c1c1",
-  background = "#131313",
-}
-
+config.color_scheme = "light"
 config.inactive_pane_hsb = {
   saturation = 1.0,
   brightness = 0.6,

@@ -16,7 +16,6 @@ M.omnifunc = function(findstart, _)
     }):wait()
 
     if response.code ~= 0 then
-      print(response.stderr)
       vim.notify("Request failed: '" .. response.stderr:gsub("\n", "") .. "'")
       return {}
     end

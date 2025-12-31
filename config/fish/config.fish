@@ -39,7 +39,7 @@ end
 
 set -x EDITOR nvim
 set -x VISUAL $EDITOR
-set -x LESS -F -i -R -S -w -X -z-4
+set -x LESS "-F -i -R -S -w -X -z-4"
 set -x GOPATH $HOME/.go
 
 alias vim nvim

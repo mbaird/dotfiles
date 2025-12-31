@@ -26,6 +26,9 @@ set -x MISE_DATA_DIR $HOME/.mise
 # `git trust`
 set -x PATH ./.git/safe/../../bin $PATH
 
+# `git jump`
+fish_add_path /opt/homebrew/share/git-core/contrib/git-jump
+
 # scripts
 set -x PATH $HOME/.bin $PATH
 

@@ -7,6 +7,9 @@ config.font_size = 15.0
 config.line_height = 1.22
 config.cell_width = 0.94
 config.font = wezterm.font('SF Mono')
+config.font_rules = {
+  { intensity = 'Half', font = wezterm.font('SF Mono', { weight = 'Regular' }) }
+}
 
 -- Cursor
 config.default_cursor_style = "SteadyUnderline"
@@ -15,8 +18,7 @@ config.cursor_blink_rate = 0
 
 -- Window
 config.quit_when_all_windows_are_closed = false
-config.use_resize_increments = true
-config.window_decorations = "TITLE|RESIZE"
+config.window_decorations = "TITLE|RESIZE|MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR"
 config.window_padding = {
   bottom = '0cell',
 }
@@ -25,15 +27,14 @@ config.window_padding = {
 config.show_new_tab_button_in_tab_bar = false
 config.switch_to_last_active_tab_when_closing_tab = true
 config.tab_bar_at_bottom = true
-config.tab_max_width = 25
+config.tab_max_width = 35
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Theme
 config.color_scheme = "light"
 config.inactive_pane_hsb = {
-  saturation = 1.0,
-  brightness = 0.6,
+  brightness = 0.9,
 }
 
 -- Shortcuts

@@ -38,9 +38,9 @@ palette.border = palette.muted
 
 palette.error = palette.love.ro(4).abs_sa(20).abs_da(5)
 palette.warn = palette.gold
-palette.ok = palette.leaf
+palette.ok = palette.foam
 palette.hint = palette.iris
-palette.info = palette.foam
+palette.info = palette.cerulean
 
 palette.pine_blend = blend(palette.pine, palette.base, 0.25)
 palette.gold_blend = blend(palette.gold, palette.base, 0.2)

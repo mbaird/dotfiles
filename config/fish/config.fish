@@ -41,6 +41,7 @@ set -x EDITOR nvim
 set -x VISUAL $EDITOR
 set -x LESS "-F -i -R -S -w -X -z-4"
 set -x GOPATH $HOME/.go
+set -x MANPAGER "nvim +Man!"
 
 alias vim nvim
 alias j z

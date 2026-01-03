@@ -21,6 +21,8 @@ vim.g.projectionist_heuristics = {
   },
 }
 
+vim.g["test#go#gotest#options"] = "-race -tags=debug -v"
+
 vim.opt.background = "light"
 vim.opt.complete = ".,o"
 vim.opt.completeopt = "fuzzy,menuone,noselect"

@@ -1,7 +1,7 @@
 {
   "plugins": {
     "fzf-lua": {
-      "rev": "a899e3e33c6c26ffeda5739fb6e7157cfc21ad6f",
+      "rev": "ab0d0135746c564ca31cd2c8a84c170802be6d16",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "llama.vim": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/rktjmp/lush.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
+      "rev": "ac04ec3c2af08e9821b4eb64ede86072b9b213bf",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "shipwright.nvim": {

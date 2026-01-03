@@ -44,4 +44,5 @@ set -x GOPATH $HOME/.go
 set -x MANPAGER "nvim +Man!"
 
 alias vim nvim
+alias n nvim
 alias j z

@@ -28,6 +28,10 @@
       "rev": "e86bb79",
       "src": "https://github.com/tpope/vim-eunuch"
     },
+    "vim-exchange": {
+      "rev": "d6c1e9790bcb8df27c483a37167459bbebe0112e",
+      "src": "https://github.com/tommcdo/vim-exchange"
+    },
     "vim-fugitive": {
       "rev": "61b51c0",
       "src": "https://github.com/tpope/vim-fugitive"

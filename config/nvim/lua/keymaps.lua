@@ -14,6 +14,17 @@ keymap("t", "<esc>", "<C-\\><C-n>")
 -- Unmap suspend
 keymap("n", "<c-z>", "")
 
+-- Toggle quickfix
+keymap("n", "<leader>q", function()
+  local open = vim.fn.getqflist({ winid = 0 }).winid ~= 0
+  if open then
+    vim.cmd("cclose")
+  else
+    vim.cmd("copen")
+    vim.cmd("wincmd p")
+  end
+end)
+
 -- Searching and replacing
 -- keymap("n", "<leader>ff", [[:Rg ]])
 -- keymap("n", "<leader>fw", [[:Rg <<C-r><C-w>>]])

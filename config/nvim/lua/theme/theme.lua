@@ -122,6 +122,11 @@ local theme = lush(function(injected_functions)
     -- llama.vim
     llama_hl_hint { fg = palette.muted, italic = true },
     llama_hl_info { fg = palette.info },
+
+    -- fzf-lua
+    FzfLuaBufFlagCur  { fg = palette.gold, bold = true },
+    FzfLuaBufFlagAlt  { fg = palette.rose },
+    FzfLuaPathLineNr  { fg = palette.pine },
   }
 end)
 

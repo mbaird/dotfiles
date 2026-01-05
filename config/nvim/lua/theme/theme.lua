@@ -113,6 +113,7 @@ local theme = lush(function(injected_functions)
     -- rubyDefine            { Keyword },
     -- rubyInstanceVariable  { fg = palette.pine },
     rubyMethodName        { Normal },
+    rubyPseudoVariable    { Normal },
     rubySymbol            { Normal },
 
     -- Treesitter

@@ -3,6 +3,7 @@
 .rspec-local
 .venv
 .local
+.claude
 mise.toml
 todo.md
 bin/zsh

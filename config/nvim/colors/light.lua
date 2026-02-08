@@ -91,8 +91,6 @@ Underlined = {underline = true},
 Visual = {bg = "#E3DFDE"},
 WarningMsg = {fg = "#EA9E34"},
 Winseparator = {},
-["llama_hl_hint"] = {fg = "#898494", italic = true},
-["llama_hl_info"] = {fg = "#4468A7"},
 ["@lsp.type.method"] = {},
 }
 vim.opt.background = "light"

@@ -2,7 +2,6 @@ _G.my = {}
 
 my.plugins = {
   "https://github.com/AndrewRadev/splitjoin.vim",
-  "https://github.com/ggml-org/llama.vim",
   "https://github.com/ibhagwan/fzf-lua",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/rktjmp/lush.nvim",

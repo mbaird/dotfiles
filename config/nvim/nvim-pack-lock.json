@@ -4,10 +4,6 @@
       "rev": "ab0d0135746c564ca31cd2c8a84c170802be6d16",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
-    "llama.vim": {
-      "rev": "8e7d1d0a1b00529fc4601b24e134d214e67c44f6",
-      "src": "https://github.com/ggml-org/llama.vim"
-    },
     "lush.nvim": {
       "rev": "9c60ec2",
       "src": "https://github.com/rktjmp/lush.nvim"

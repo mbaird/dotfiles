@@ -1,7 +1,5 @@
 vim.g.mapleader = " "
 
-vim.g.llama_config = { show_info = false }
-
 vim.g.splitjoin_ruby_curly_braces = 0
 vim.g.splitjoin_ruby_do_block_split = 0
 vim.g.splitjoin_ruby_hanging_args = 0

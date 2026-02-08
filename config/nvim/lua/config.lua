@@ -51,6 +51,7 @@ vim.opt.statusline = table.concat({
   " %f ",     -- Filepath
   "%m%r%h%w", -- Flags
   "%=",       -- Separator
+  [[%{% luaeval('#vim.diagnostic.count() ~= 0 and vim.diagnostic.status() .. " " or ""') %}]],
   "%{&filetype != '' ? &filetype : 'none'} ",
   "%2c:",     -- Column
   "%l/%L ",   -- Line, Total

@@ -4,6 +4,7 @@
 .venv
 .local
 .claude
+CLAUDE.md
 mise.toml
 todo.md
 bin/zsh

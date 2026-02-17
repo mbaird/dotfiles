@@ -1,7 +1,7 @@
 {
   "plugins": {
     "fzf-lua": {
-      "rev": "ab0d0135746c564ca31cd2c8a84c170802be6d16",
+      "rev": "d9508cc1d05ffcdc91a32dfd38fc1013a56b20da",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "lush.nvim": {
@@ -9,7 +9,7 @@
       "src": "https://github.com/rktjmp/lush.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "ac04ec3c2af08e9821b4eb64ede86072b9b213bf",
+      "rev": "2163c54bb6cfec53e3e555665ada945b8c8331b9",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "shipwright.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/tommcdo/vim-exchange"
     },
     "vim-fugitive": {
-      "rev": "61b51c0",
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
       "src": "https://github.com/tpope/vim-fugitive"
     },
     "vim-projectionist": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/tpope/vim-surround"
     },
     "vim-test": {
-      "rev": "aa619692ff48a3cf3e6bdb893765039488d4e5f3",
+      "rev": "9b063a510635c052af087c470039d80843ab9929",
       "src": "https://github.com/vim-test/vim-test"
     },
     "vim-unimpaired": {

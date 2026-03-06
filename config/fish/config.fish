@@ -33,7 +33,7 @@ fish_add_path /opt/homebrew/share/git-core/contrib/git-jump
 set -x PATH $HOME/.bin $PATH
 
 # 1password ssh
-if test -z "$SSH_TTY"
+if not set -q SSH_CONNECTION
   set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 end
 

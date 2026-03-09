@@ -31,6 +31,7 @@ fish_add_path /opt/homebrew/share/git-core/contrib/git-jump
 
 # scripts
 set -x PATH $HOME/.bin $PATH
+set -x PATH $HOME/.local/bin $PATH
 
 # 1password ssh
 if not set -q SSH_CONNECTION

@@ -5,7 +5,6 @@ font-family = SF Mono
 font-style-bold = Semibold
 font-size = 14
 adjust-cell-height = 22%
-adjust-cell-width = -6%
 cursor-style = underline
 cursor-style-blink = false
 adjust-cursor-thickness = 2

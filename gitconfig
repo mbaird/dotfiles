@@ -1,7 +1,6 @@
 [user]
   name  = Michael Baird
   email = mbaird@users.noreply.github.com
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILcxuoRBUqmGVpKUYLs4F1Y7JhvrcWQLoL0fMA8oTymm
 [alias]
   aa = add --all
   ap = add -p
@@ -55,3 +54,5 @@
   updateRefs = true
 [tag]
   sort = version:refname
+[include]
+  path = ~/.gitconfig.local

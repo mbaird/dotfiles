@@ -76,6 +76,12 @@ case "$(uname)" in
       rm -rf "$TEMP_EXTRACT" /tmp/bob.zip
     fi
 
+    if ! bob ls 2>/dev/null | grep -q "Used"; then
+      info "Installing neovim nightly via bob..."
+      "$HOME/.local/bin/bob" install nightly
+      "$HOME/.local/bin/bob" use nightly
+    fi
+
     info "Linking dotfiles..."
     sh "$DOTFILES_DIR/install-linux.sh"
 

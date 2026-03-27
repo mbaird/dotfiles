@@ -50,17 +50,7 @@ handle_file_cp() {
 }
 handle_file_ln() {
   if [ -e "$2" ]; then
-    printf "%s " "overwrite $2? [yN]"
-    read overwrite
-    case "$overwrite" in
-      y)
-        $RM -rf "$2"
-        ;;
-      *)
-        echo "skipping $2"
-        return
-        ;;
-    esac
+    $RM -rf "$2"
   fi
   verbose "'$1' -> '$2'"
   $MKDIR -p "$($DIRNAME "$2")"

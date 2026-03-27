@@ -110,7 +110,7 @@ if command -v fish &>/dev/null; then
       echo "$FISH_PATH" | sudo tee -a /etc/shells
     fi
     info "Changing default shell to fish..."
-    chsh -s "$FISH_PATH"
+    sudo chsh -s "$FISH_PATH" "$USER"
   fi
 fi
 

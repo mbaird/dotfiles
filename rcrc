@@ -1,2 +1,2 @@
 SYMLINK_DIRS="1password"
-EXCLUDES="*.md Brewfile"
+EXCLUDES="*.md *.sh Brewfile"

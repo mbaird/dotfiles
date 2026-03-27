@@ -49,16 +49,31 @@ case "$(uname)" in
       info "Installing bob (neovim version manager)..."
       ARCH="$(uname -m)"
       case "$ARCH" in
-        aarch64) BOB_ARCH="aarch64-unknown-linux-gnu" ;;
-        x86_64)  BOB_ARCH="x86_64-unknown-linux-gnu" ;;
-        *)       echo "Unsupported architecture: $ARCH"; exit 1 ;;
+        x86_64)       BOB_ARCH="x86_64" ;;
+        aarch64|arm64) BOB_ARCH="arm" ;;
+        *)            echo "Unsupported architecture: $ARCH"; exit 1 ;;
       esac
-      BOB_VERSION="$(curl -s https://api.github.com/repos/MordechaiHadad/bob/releases/latest | grep tag_name | cut -d'"' -f4)"
-      curl -fsSL "https://github.com/MordechaiHadad/bob/releases/download/${BOB_VERSION}/bob-${BOB_ARCH}.zip" -o /tmp/bob.zip
-      unzip -o /tmp/bob.zip -d /tmp/bob
-      mv /tmp/bob/bob-${BOB_ARCH}/bob "$HOME/.local/bin/bob"
+      ASSET_PATTERN="bob-linux-${BOB_ARCH}.zip"
+      DOWNLOAD_URL=$(curl -s https://api.github.com/repos/MordechaiHadad/bob/releases/latest \
+        | grep "browser_download_url" | grep "$ASSET_PATTERN" | head -n 1 | cut -d'"' -f4)
+      if [ -z "$DOWNLOAD_URL" ]; then
+        echo "Error: Could not find release asset for $ASSET_PATTERN"
+        exit 1
+      fi
+      TEMP_EXTRACT="/tmp/bob_extract_$$"
+      curl -fsSL "$DOWNLOAD_URL" -o /tmp/bob.zip
+      mkdir -p "$TEMP_EXTRACT"
+      unzip -q /tmp/bob.zip -d "$TEMP_EXTRACT"
+      BOB_BIN=$(find "$TEMP_EXTRACT" -type f -name "bob" | head -n 1)
+      if [ -z "$BOB_BIN" ]; then
+        echo "Error: Could not find 'bob' executable in zip."
+        rm -rf "$TEMP_EXTRACT" /tmp/bob.zip
+        exit 1
+      fi
+      mkdir -p "$HOME/.local/bin"
+      mv "$BOB_BIN" "$HOME/.local/bin/bob"
       chmod +x "$HOME/.local/bin/bob"
-      rm -rf /tmp/bob /tmp/bob.zip
+      rm -rf "$TEMP_EXTRACT" /tmp/bob.zip
     fi
 
     info "Linking dotfiles..."

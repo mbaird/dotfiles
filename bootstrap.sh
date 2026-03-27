@@ -102,6 +102,16 @@ if command -v fish &>/dev/null; then
 
   info "Installing fish plugins..."
   fish -c "fisher update"
+
+  FISH_PATH="$(command -v fish)"
+  if [ "$SHELL" != "$FISH_PATH" ]; then
+    if ! grep -qx "$FISH_PATH" /etc/shells; then
+      info "Adding fish to /etc/shells..."
+      echo "$FISH_PATH" | sudo tee -a /etc/shells
+    fi
+    info "Changing default shell to fish..."
+    chsh -s "$FISH_PATH"
+  fi
 fi
 
 info "Done!"

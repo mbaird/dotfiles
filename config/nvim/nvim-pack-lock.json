@@ -1,7 +1,7 @@
 {
   "plugins": {
     "fzf-lua": {
-      "rev": "d9508cc1d05ffcdc91a32dfd38fc1013a56b20da",
+      "rev": "1e866cce085cc6df3d3e4fb59f00105fa84cef6c",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "lush.nvim": {
@@ -9,7 +9,7 @@
       "src": "https://github.com/rktjmp/lush.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "2163c54bb6cfec53e3e555665ada945b8c8331b9",
+      "rev": "8a9378a822719346a0288fa004dab302ca3c0a8f",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "shipwright.nvim": {
@@ -17,7 +17,7 @@
       "src": "https://github.com/rktjmp/shipwright.nvim"
     },
     "splitjoin.vim": {
-      "rev": "9ce4fb4f0538cff02a57a393057b7ab371324483",
+      "rev": "8c4c87e72d20d8d5eee8b29c320eb61767578841",
       "src": "https://github.com/AndrewRadev/splitjoin.vim"
     },
     "vim-eunuch": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/tpope/vim-surround"
     },
     "vim-test": {
-      "rev": "9b063a510635c052af087c470039d80843ab9929",
+      "rev": "bca51394b5febc6e50492d88e8e124f5c5147087",
       "src": "https://github.com/vim-test/vim-test"
     },
     "vim-unimpaired": {

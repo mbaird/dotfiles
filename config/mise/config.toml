@@ -1,9 +1,9 @@
 [tools]
-go = "latest"
-node = "lts"
-python = "latest"
-ruby = "latest"
-uv = "latest"
+go = "1.26.1"
+node = "24.14.1"
+python = "3.14.3"
+ruby = "4.0.2"
+uv = "0.11.3"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "ruby", "python", "terraform", "yarn"]

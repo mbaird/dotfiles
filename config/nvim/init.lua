@@ -3,6 +3,7 @@ _G.my = {}
 my.plugins = {
   "https://github.com/AndrewRadev/splitjoin.vim",
   "https://github.com/ibhagwan/fzf-lua",
+  "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/rktjmp/lush.nvim",
   "https://github.com/rktjmp/shipwright.nvim",
@@ -21,6 +22,7 @@ my.plugins = {
 vim.pack.add(my.plugins)
 
 require("plugins.fzf")
+require("plugins.gitsigns")
 
 require("config")
 require("commands")

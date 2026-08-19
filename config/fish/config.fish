@@ -35,6 +35,9 @@ if not set -q SSH_CONNECTION
   set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 end
 
+# 1password plugins
+source $HOME/.config/op/plugins.sh
+
 set -x EDITOR nvim
 set -x VISUAL $EDITOR
 set -x LESS "-F -i -R -S -w -X -z-4"

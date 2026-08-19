@@ -20,9 +20,6 @@ set -x HOMEBREW_NO_ENV_HINTS 1
 # nvim
 fish_add_path $HOME/.local/share/bob/nvim-bin
 
-# mise
-set -x MISE_DATA_DIR $HOME/.mise
-
 # `git trust`
 set -x PATH ./.git/safe/../../bin $PATH
 

@@ -84,5 +84,5 @@ vim.lsp.enable({
   "intelephense",
   "jsonls",
   "ruby_lsp",
-  "ts_ls",
+  "tsc",
 })

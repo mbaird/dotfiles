@@ -36,7 +36,9 @@ if not set -q SSH_CONNECTION
 end
 
 # 1password plugins
-source $HOME/.config/op/plugins.sh
+if test -f $HOME/.config/op/plugins.sh
+  source $HOME/.config/op/plugins.sh
+end
 
 set -x EDITOR nvim
 set -x VISUAL $EDITOR

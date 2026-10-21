@@ -17,6 +17,7 @@
   origin-head = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
   ra = rebase --abort
   rc = rebase --continue
+  tidy = "!git fetch --quiet origin && git for-each-ref refs/heads --format='%(HEAD)%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" && $1 !~ /^\\*/ { print $1 }' | xargs git branch -D"
   trust = "!mkdir -p .git/safe"
   up = !git pull origin $(git origin-head)
 [branch]
